@@ -1,0 +1,226 @@
+<template>
+  <div id="app">
+    <button type="button" class="submit" @click="showModal">
+      Add Location +
+    </button>
+
+    <div class="modal-backdrop" v-if="isModalVisible">
+      <div class="modal">
+        <header class="modal-header">
+          <slot name="header"> Add A Location </slot>
+          <button type="button" class="btn-close" @click="closeModal">x</button>
+        </header>
+
+        <section class="modal-body center">
+          <form
+            @submit.prevent="submitForm"
+            v-if="!formSubmitted"
+            class="form1"
+          >
+            <div class="inputs">
+              <span>Location Name:</span>
+              <input
+                v-model="name"
+                type="text"
+                placeholder="Enter location name"
+                style="width: 250px"
+              />
+            </div>
+            <div class="inputs">
+              <span>Location Directions/Room #:</span>
+              <input
+                v-model="directions"
+                type="text"
+                placeholder="Describe how to get to location/room #"
+                style="width: 250px"
+              />
+            </div>
+
+            <div class="inputs">
+              <span>Location Description/Notes:</span>
+              <input
+                v-model="description"
+                type="description"
+                placeholder="Enter description"
+                style="width: 250px"
+              />
+            </div>
+            <div class="inputs">
+              <span>Reservation Required:</span>
+
+              <div>
+                <input type="radio" v-model="reservaion" value="Yes" />
+                <label>Yes</label>
+              </div>
+              <div>
+                <input type="radio" v-model="reservaion" value="No" />
+                <label>No</label>
+              </div>
+            </div>
+            <div class="inputs">
+              <span>Good For Group Work:</span>
+
+              <div>
+                <input type="radio" v-model="groupwork" value="Yes" />
+                <label>Yes</label>
+              </div>
+              <div>
+                <input type="radio" v-model="groupwork" value="No" />
+                <label>No</label>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <footer class="modal-footer">
+          <button
+            class="submit"
+            type="submit"
+            value="Submit"
+            @click="submitForm"
+          >
+            Submit
+          </button>
+        </footer>
+      </div>
+    </div>
+    <div v-if="formSubmitted">
+      <h3>Your Location Submission Details:</h3>
+      <p>Location Name: {{ name }}</p>
+      <p>Location Directions: {{ directions }}</p>
+      <p>Description: {{ description }}</p>
+      <p>Reservation Required: {{ reservaion }}</p>
+      <p>Groupwork: {{ groupwork }}</p>
+    </div>
+  </div>
+</template>
+
+<script>
+// import PopUp from "./PopUp.vue";
+
+export default {
+  name: "App",
+  components: {},
+  data() {
+    return {
+      isModalVisible: false,
+      formSubmitted: false,
+      name: "",
+      directions: "",
+      description: "",
+      reservaion: "",
+      groupwork: "",
+      openModal: true,
+    };
+  },
+  methods: {
+    showModal() {
+      this.isModalVisible = true;
+      this.formSubmitted = false;
+      this.name = "";
+      this.directions = "";
+      this.description = "";
+      this.reservaion = "";
+      this.groupwork = "";
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    },
+    submitForm() {
+      this.isModalVisible = false;
+      this.formSubmitted = true;
+      this.$emit("formSubmitted");
+    },
+  },
+};
+</script>
+
+<style scoped>
+.form1 {
+  width: 100%;
+}
+.nullify {
+  margin: 0px;
+  padding: 0px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0px;
+  margin-bottom: 2%;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #ffffff;
+  box-shadow: 2px 2px 20px 1px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 300px;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-top: 1px solid #eeeeee;
+  background-color: #f6aa1c;
+}
+
+.modal-header {
+  padding: 15px;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #eeeeee;
+  color: #621708;
+  justify-content: space-between;
+  background-color: #f6aa1c;
+}
+
+.modal-body {
+  position: relative;
+  padding: 20px 10px;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #621708;
+  background: transparent;
+}
+
+.submit {
+  width: 125px;
+  height: 25px;
+  color: #f6aa1c;
+  background-color: #621708;
+  border-radius: 4px;
+  border: none;
+}
+</style>

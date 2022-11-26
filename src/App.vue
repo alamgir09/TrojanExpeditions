@@ -1,17 +1,18 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+<template><PageHeader /> <AddReviewButton /></template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PageHeader from "./components/PageHeader.vue";
+// import AddLocationButton from "./components/AddLocationButton.vue";
+import AddReviewButton from "./components/AddReviewButton.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    PageHeader,
+    // AddLocationButton,
+    AddReviewButton,
+  },
+};
 </script>
 
 <style>
