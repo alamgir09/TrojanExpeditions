@@ -148,6 +148,7 @@ export default {
       this.quiet = "0";
       this.groupwork = "";
       this.clean = "0";
+      this.rating = "0";
     },
     closeModal() {
       this.isModalVisible = false;

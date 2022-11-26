@@ -2,15 +2,11 @@
 
 <script>
 import PageHeader from "./components/PageHeader.vue";
-// import AddLocationButton from "./components/AddLocationButton.vue";
-import AddReviewButton from "./components/AddReviewButton.vue";
 
 export default {
   name: "App",
   components: {
     PageHeader,
-    // AddLocationButton,
-    AddReviewButton,
   },
 };
 </script>
