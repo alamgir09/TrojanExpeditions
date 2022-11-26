@@ -30,8 +30,8 @@ export default {
 .nav-bar {
   height: 50px;
   width: 100vw;
-  background-color: #f6aa1c;
-  color: #621708;
+  background-color: #621708;
+  color: #f6aa1c;
 }
 .link-box {
   height: 100%;
