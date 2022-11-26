@@ -6,6 +6,7 @@
             <div class="menu-item"><router-link to="/locations">Locations</router-link></div>
             <div class="menu-item"><router-link to="/reviews">Reviews</router-link></div>
             <div class="menu-item"><router-link to="/forum">Forum</router-link></div>
+            <div class="menu-item"><router-link to="/LogIn">Log In</router-link></div>
         </nav>
     </div>
     </body>

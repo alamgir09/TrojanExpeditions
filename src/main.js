@@ -9,6 +9,7 @@ import MainPage from "@/views/MainPage.vue";
 import LocationsPage from "@/views/Locations/LocationsPage.vue";
 import ReviewMain from "@/views/Review/ReviewMain.vue";
 import ForumMain from "@/views/Forum/ForumMain.vue";
+import LogIn from "@/views/LogIn.vue";
 
 const vuetify = createVuetify({
     components,
@@ -42,6 +43,11 @@ const router = createRouter({
             path: '/reviews',
             name: 'reviews',
             component: ReviewMain
+        },
+        {
+            path: '/LogIn',
+            name: 'LogIn',
+            component: LogIn
         }
     ]
 });
