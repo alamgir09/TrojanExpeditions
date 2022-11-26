@@ -1,23 +1,27 @@
 <template>
   <div class="nav-bar nullify center">
     <div class="link-box">
-      <h5 class="links">ProjectName</h5>
-      <h5 class="links">Locations</h5>
+      <h3 class="links">ProjectName</h3>
+      <h3 class="links">Locations</h3>
     </div>
     <div class="link-box">
-      <h5 class="links">Forum</h5>
-      <img
-        src="../assets/tommytrojan.png"
-        alt="tommy trojan"
-        class="image links"
-      />
+      <h3 class="links">Forum</h3>
+      <PageHeaderLogoDropdownVue class="mr-8" />
     </div>
   </div>
 </template>
 
 <script>
+import PageHeaderLogoDropdownVue from "./PageHeaderLogoDropdown.vue";
 export default {
-  data() {},
+  components: {
+    PageHeaderLogoDropdownVue,
+  },
+  data() {
+    return {
+      image: require("@/assets/tommytrojan.png"),
+    };
+  },
 };
 </script>
 
@@ -30,8 +34,8 @@ export default {
 .nav-bar {
   height: 50px;
   width: 100vw;
-  background-color: #621708;
-  color: #f6aa1c;
+  background-color: #8e7f7f;
+  color: white;
 }
 .link-box {
   height: 100%;

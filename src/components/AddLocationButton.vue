@@ -49,11 +49,11 @@
               <span>Reservation Required:</span>
 
               <div>
-                <input type="radio" v-model="reservaion" value="Yes" />
+                <input type="radio" v-model="reservation" value="Yes" />
                 <label>Yes</label>
               </div>
               <div>
-                <input type="radio" v-model="reservaion" value="No" />
+                <input type="radio" v-model="reservation" value="No" />
                 <label>No</label>
               </div>
             </div>
@@ -89,7 +89,7 @@
       <p>Location Name: {{ name }}</p>
       <p>Location Directions: {{ directions }}</p>
       <p>Description: {{ description }}</p>
-      <p>Reservation Required: {{ reservaion }}</p>
+      <p>Reservation Required: {{ reservation }}</p>
       <p>Groupwork: {{ groupwork }}</p>
     </div>
   </div>
@@ -108,7 +108,7 @@ export default {
       name: "",
       directions: "",
       description: "",
-      reservaion: "",
+      reservation: "",
       groupwork: "",
       openModal: true,
     };
@@ -120,7 +120,7 @@ export default {
       this.name = "";
       this.directions = "";
       this.description = "";
-      this.reservaion = "";
+      this.reservation = "";
       this.groupwork = "";
     },
     closeModal() {

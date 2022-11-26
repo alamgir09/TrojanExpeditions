@@ -1,67 +1,76 @@
 <template>
-    <body>
+  <body>
     <div id="app">
-        <nav>
-            <div class="menu-item"><router-link to="/">Home</router-link></div>
-            <div class="menu-item"><router-link to="/locations">Locations</router-link></div>
-            <div class="menu-item"><router-link to="/reviews">Reviews</router-link></div>
-            <div class="menu-item"><router-link to="/forum">Forum</router-link></div>
-            <div class="menu-item"><router-link to="/LogIn">Log In</router-link></div>
-        </nav>
+      <nav>
+        <div class="menu-item"><router-link to="/">Home</router-link></div>
+        <div class="menu-item">
+          <router-link to="/locations">Locations</router-link>
+        </div>
+        <div class="menu-item">
+          <router-link to="/reviews">Reviews</router-link>
+        </div>
+        <div class="menu-item">
+          <router-link to="/forum">Forum</router-link>
+        </div>
+        <div class="menu-item">
+          <router-link to="/LogIn">Log In</router-link>
+        </div>
+      </nav>
     </div>
-    </body>
-    <router-view/>
+  </body>
+  <router-view />
 </template>
 
 <script></script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #8E7F7F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8e7f7f;
 }
 
 nav .menu-item {
-    font-family: "Roboto Slab", sans-serif;
-    color: #FFF;
-    padding: 10px 20px;
-    text-align: center;
-    border-bottom: 3px solid transparent;
-    display: flex;
-    transition: 0.4s;
+  font-family: "Roboto Slab", sans-serif;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  transition: 0.4s;
 }
 
 nav .menu-item a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 nav .menu-item a:hover {
-    color: #D9D9D9;
+  color: #d9d9d9;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 #app {
-    height: 100%;
-    width: 100%;
-    overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
 }
 body {
-    margin: 0;
-    color: rgba(0, 0, 0, 0.65);
-    font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    font-variant: tabular-nums;
-    line-height: 1.5;
-    background-color: #fff;
-    -webkit-font-feature-settings: 'tnum';
-    font-feature-settings: 'tnum';
+  margin: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  background-color: #fff;
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
 }
-
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div class="background">
-    <h1 class="title">Login</h1>
+    <h1 class="title">Register</h1>
     <div class="outer-form">
       <form action="submit" class="form">
         <div class="inputs">
-          <h3>Email:</h3>
+          <h3>USC Email:</h3>
           <input type="email" style="width: 150px" required v-model="email" />
         </div>
         <div class="inputs">
@@ -17,7 +17,11 @@
           />
         </div>
         <div class="inputs">
-          <button class="login-btn" @click="checkInputs">Login</button>
+          <h3>Major:</h3>
+          <input type="text" style="width: 150px" required v-model="major" />
+        </div>
+        <div class="inputs">
+          <button class="login-btn" @submit="checkInputs">Register</button>
         </div>
       </form>
     </div>
@@ -29,12 +33,13 @@ export default {
     return {
       email: "",
       password: "",
+      major: "",
     };
   },
   methods: {
     checkInputs(e) {
-      if (this.email == "" && this.password == "") {
-        alert("You must fill out both fields.");
+      if (this.email == "" && this.password == "" && this.major == "") {
+        alert("You must fill out ALL fields.");
         e.preventDefault();
       } else if (!this.email.includes("@usc.edu")) {
         alert("Please use your USC email");
@@ -72,7 +77,7 @@ input {
 }
 .outer-form {
   width: 40%;
-  height: 30%;
+  height: 35%;
   border: 3px solid black;
   border-radius: 10px;
   position: absolute;
