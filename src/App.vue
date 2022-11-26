@@ -1,12 +1,14 @@
-<template><PageHeader /></template>
+<template><PageHeader /> <LogIn /></template>
 
 <script>
 import PageHeader from "./components/PageHeader.vue";
+import LogIn from "./LogIn.vue";
 
 export default {
   name: "App",
   components: {
     PageHeader,
+    LogIn,
   },
 };
 </script>
