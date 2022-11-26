@@ -1,4 +1,4 @@
-package final_project;
+package websocket;
 
 public class Rating {
 	// required attributes
