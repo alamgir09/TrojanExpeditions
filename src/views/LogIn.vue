@@ -2,7 +2,7 @@
   <div class="background">
     <h1 class="title">Login</h1>
     <div class="outer-form">
-      <form action="submit" class="form">
+      <form action="/" class="form">
         <div class="inputs">
           <h3>Email:</h3>
           <input type="email" style="width: 150px" required v-model="email" />
@@ -40,6 +40,8 @@ export default {
         alert("Please use your USC email");
         e.preventDefault();
       }
+      this.$loggedIn = true;
+      console.log(this.$loggedIn);
     },
   },
 };
@@ -57,7 +59,8 @@ input {
   text-align: center;
   position: absolute;
   top: 10%;
-  left: 30%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .center {
   display: flex;
@@ -82,7 +85,7 @@ input {
 .form {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   width: 100%;
   height: 100%;

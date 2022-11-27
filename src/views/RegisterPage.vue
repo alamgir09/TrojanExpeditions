@@ -62,7 +62,7 @@ input {
   text-align: center;
   position: absolute;
   top: 10%;
-  left: 30%;
+  margin-left: 30%;
 }
 .center {
   display: flex;
@@ -77,7 +77,7 @@ input {
 }
 .outer-form {
   width: 40%;
-  height: 35%;
+  height: 30%;
   border: 3px solid black;
   border-radius: 10px;
   position: absolute;
@@ -87,7 +87,7 @@ input {
 .form {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   width: 100%;
   height: 100%;

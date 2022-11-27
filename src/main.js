@@ -58,7 +58,9 @@ const router = createRouter({
   ],
 });
 
-createApp(App)
+let app = createApp(App);
+app.config.globalProperties.$loggedIn = false;
+app
   .component("font-awesome-icon", FontAwesomeIcon)
   .use(vuetify)
   .use(router)

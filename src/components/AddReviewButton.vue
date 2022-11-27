@@ -31,7 +31,13 @@
               <textarea
                 v-model="comments"
                 placeholder="Your Review"
-                style="width: 252px; font-family: inherit"
+                style="
+                  width: 252px;
+                  font-family: inherit;
+                  border: 1px solid black;
+                  border-radius: 5px;
+                  padding: 5px;
+                "
               ></textarea>
             </div>
             <div class="inputs">
@@ -140,15 +146,22 @@ export default {
     };
   },
   methods: {
-    showModal() {
-      this.isModalVisible = true;
-      this.formSubmitted = false;
-      this.name = "";
-      this.comments = "";
-      this.quiet = "0";
-      this.groupwork = "";
-      this.clean = "0";
-      this.rating = "0";
+    showModal(e) {
+      if (!this.$loggedIn.value) {
+        alert(
+          "You must be a registered user to add a new review. Please login or register."
+        );
+        e.preventDefault();
+      } else {
+        this.isModalVisible = true;
+        this.formSubmitted = false;
+        this.name = "";
+        this.comments = "";
+        this.quiet = "0";
+        this.groupwork = "";
+        this.clean = "0";
+        this.rating = "0";
+      }
     },
     closeModal() {
       this.isModalVisible = false;

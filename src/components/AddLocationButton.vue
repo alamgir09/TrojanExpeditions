@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <button type="button" class="submit" @click="showModal">
       Add Location +
     </button>
@@ -114,14 +114,21 @@ export default {
     };
   },
   methods: {
-    showModal() {
-      this.isModalVisible = true;
-      this.formSubmitted = false;
-      this.name = "";
-      this.directions = "";
-      this.description = "";
-      this.reservation = "";
-      this.groupwork = "";
+    showModal(e) {
+      if (!this.$loggedIn) {
+        alert(
+          "You must be a registered user to add a new location. Please login or register."
+        );
+        e.preventDefault();
+      } else {
+        this.isModalVisible = true;
+        this.formSubmitted = false;
+        this.name = "";
+        this.directions = "";
+        this.description = "";
+        this.reservation = "";
+        this.groupwork = "";
+      }
     },
     closeModal() {
       this.isModalVisible = false;
@@ -175,7 +182,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 500px;
-  height: 300px;
+  height: 450px;
 }
 
 .modal-footer {

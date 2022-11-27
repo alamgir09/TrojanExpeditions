@@ -1,11 +1,13 @@
 <template>
   <div class="nav-bar nullify center">
     <div class="link-box">
-      <h3 class="links">ProjectName</h3>
-      <h3 class="links">Locations</h3>
+      <h3 class="links"><router-link to="/">FinalProject</router-link></h3>
+      <h3 class="links">
+        <router-link to="/locations">Locations</router-link>
+      </h3>
     </div>
     <div class="link-box">
-      <h3 class="links">Forum</h3>
+      <h3 class="links"><router-link to="/forum">Forum</router-link></h3>
       <PageHeaderLogoDropdownVue class="mr-8" />
     </div>
   </div>

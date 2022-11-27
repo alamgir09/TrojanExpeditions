@@ -13,7 +13,7 @@
       <v-list>
         <v-list-item v-for="(item, index) in items" :key="index"
           ><v-list-item-title
-            ><router-link :to="item.link">{{
+            ><router-link :to="item.link" class="dropdown-items">{{
               item.title
             }}</router-link></v-list-item-title
           >
@@ -35,3 +35,22 @@ export default {
   },
 };
 </script>
+<style>
+.links {
+  margin-top: 10%;
+  margin-bottom: 0%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.dropdown-items {
+  text-decoration: none;
+  color: black;
+}
+</style>

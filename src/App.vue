@@ -12,16 +12,21 @@
         <div class="menu-item">
           <router-link to="/forum">Forum</router-link>
         </div>
-        <div class="menu-item">
-          <router-link to="/LogIn">Log In</router-link>
-        </div>
+        <PageHeaderLogoDropdownVue style="position: absolute; right: 20px" />
       </nav>
     </div>
   </body>
   <router-view />
 </template>
 
-<script></script>
+<script>
+import PageHeaderLogoDropdownVue from "./components/PageHeaderLogoDropdown.vue";
+export default {
+  components: {
+    PageHeaderLogoDropdownVue,
+  },
+};
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
@@ -59,6 +64,7 @@ nav .menu-item a:hover {
   height: 100%;
   width: 100%;
   overflow-y: auto;
+  position: relative;
 }
 body {
   margin: 0;
