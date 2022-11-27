@@ -22,6 +22,7 @@
 <script>
 import PageHeaderLogoDropdownVue from "./components/PageHeaderLogoDropdown.vue";
 export default {
+  props: ["loggedIn"],
   components: {
     PageHeaderLogoDropdownVue,
   },

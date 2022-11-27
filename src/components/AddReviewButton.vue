@@ -143,11 +143,13 @@ export default {
       clean: "0",
       rating: "0",
       openModal: true,
+      loggedIn: localStorage.loggedIn,
     };
   },
   methods: {
     showModal(e) {
-      if (!this.$loggedIn.value) {
+      this.loggedIn = localStorage.loggedIn;
+      if (this.loggedIn == "false") {
         alert(
           "You must be a registered user to add a new review. Please login or register."
         );

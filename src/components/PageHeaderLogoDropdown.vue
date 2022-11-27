@@ -10,12 +10,21 @@
         />
       </template>
 
-      <v-list>
+      <v-list v-if="loggedIn == 'false'">
         <v-list-item v-for="(item, index) in items" :key="index"
           ><v-list-item-title
             ><router-link :to="item.link" class="dropdown-items">{{
               item.title
             }}</router-link></v-list-item-title
+          >
+        </v-list-item>
+      </v-list>
+      <v-list v-if="loggedIn == 'true'" style="padding: 0px">
+        <v-list-item
+          ><router-link to="/" class="dropdown-items">
+            <v-list-item-title @click="logout"
+              >Log Out</v-list-item-title
+            ></router-link
           >
         </v-list-item>
       </v-list>
@@ -31,7 +40,15 @@ export default {
         { title: "Login", link: "LogIn" },
         { title: "Register", link: "RegisterPage" },
       ],
+      loggedIn: localStorage.loggedIn,
     };
+  },
+  methods: {
+    logout() {
+      localStorage.loggedIn = false;
+      this.loggedIn = localStorage.loggedIn;
+      console.log(this.loggedIn);
+    },
   },
 };
 </script>

@@ -1,54 +1,69 @@
 <template>
-    <div id="mainPage">
-        <main>
-            <div class="search-box">
-                <input name="" id="" type="text" class="search-bar" placeholder="Your favorite library">
-            </div>
-        </main>
-    </div>
+  <div id="mainPage">
+    <main>
+      <div class="search-box">
+        <input
+          name=""
+          id=""
+          type="text"
+          class="search-bar"
+          placeholder="Your favorite library"
+        />
+      </div>
+    </main>
+  </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      loggedIn: localStorage.loggedIn,
+    };
+  },
+};
+</script>
 
 <style scoped>
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 header {
-    width: 100vw;
-    height: 90px;
-    background-color: #8E7F7F;
-    align-content: center;
-    padding: 22.5px;
+  width: 100vw;
+  height: 90px;
+  background-color: #8e7f7f;
+  align-content: center;
+  padding: 22.5px;
 }
 main {
-    display: flex;
-    min-height: 100vh;
-    align-content: center;
-    justify-content: center;
+  display: flex;
+  min-height: 100vh;
+  align-content: center;
+  justify-content: center;
 }
 .search-box {
-    height: 50px;
-    margin-top: 20vh;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 60vw;
+  height: 50px;
+  margin-top: 20vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 60vw;
 }
 ::placeholder {
-    font-size: 14px;
-    /*margin-top: auto;*/
-
+  font-size: 14px;
+  /*margin-top: auto;*/
 }
 
 .search-bar {
-    display: block;
-    width: 40%;
-    padding: 15px;
-    font-size: 20px;
-    box-shadow: 0px 0px 16px rgba(0,0,0,0.25);
-    appearance: none;
-    border: none;
-    background: none;
-    outline: none;
-    border-radius: 10px 10px 10px 10px;
+  display: block;
+  width: 40%;
+  padding: 15px;
+  font-size: 20px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 10px 10px 10px 10px;
 }
 </style>

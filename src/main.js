@@ -29,38 +29,42 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: MainPage,
+      props: true,
     },
     {
       path: "/forum",
       name: "forum",
       component: ForumMain,
+      props: true,
     },
     {
       path: "/locations",
       name: "locations",
       component: LocationsPage,
+      props: true,
     },
     {
       path: "/reviews",
       name: "reviews",
       component: ReviewMain,
+      props: true,
     },
     {
       path: "/LogIn",
       name: "LogIn",
       component: LogIn,
+      props: true,
     },
     {
       path: "/RegisterPage",
       name: "Register",
       component: RegisterPage,
+      props: true,
     },
   ],
 });
 
-let app = createApp(App);
-app.config.globalProperties.$loggedIn = false;
-app
+createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)
   .use(vuetify)
   .use(router)

@@ -39,9 +39,9 @@ export default {
       } else if (!this.email.includes("@usc.edu")) {
         alert("Please use your USC email");
         e.preventDefault();
+      } else {
+        localStorage.setItem("loggedIn", true);
       }
-      this.$loggedIn = true;
-      console.log(this.$loggedIn);
     },
   },
 };

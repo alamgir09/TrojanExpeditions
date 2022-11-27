@@ -111,11 +111,13 @@ export default {
       reservation: "",
       groupwork: "",
       openModal: true,
+      loggedIn: localStorage.loggedIn,
     };
   },
   methods: {
     showModal(e) {
-      if (!this.$loggedIn) {
+      this.loggedIn = localStorage.loggedIn;
+      if (this.loggedIn == "false") {
         alert(
           "You must be a registered user to add a new location. Please login or register."
         );
