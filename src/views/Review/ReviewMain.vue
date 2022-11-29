@@ -130,7 +130,7 @@ h1{
     box-sizing: border-box;
     text-align: left;
     margin-left: 60px;
-    margin-bottom: 250px;
+    margin-bottom: 50px;
     float:left;
     border-radius: 5%;
     background-color: lightgray;
@@ -150,7 +150,7 @@ h1{
     height: 215px;
     box-sizing: border-box;
     margin-left:650px ;
-    margin-bottom: 250px;
+    margin-bottom: 50px;
     border-radius: 5%;
     background-color: lightgray;
 }
