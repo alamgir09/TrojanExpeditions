@@ -18,7 +18,7 @@
       <img src="img/Hoose.jpg" alt="Hoose">
     </a>
   </div>
-    <div class="desc">Hoose Library</div>
+    <div class="desc">Hoose Librar</div>
   </div>
 </div>
 
