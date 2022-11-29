@@ -104,7 +104,7 @@ h1{
     margin-top: 20px;
     background-color: lightgray;
     color:black;
-    
+    border-radius: 5%;
 }
 
 .introduction_inner
@@ -117,7 +117,6 @@ h1{
     position:absolute;
     border: thin solid black;
     background-color: black;
-    border-radius: 5%;
 }
 
 .summary
@@ -169,6 +168,7 @@ h1{
     box-sizing: border-box;
     margin:75px;
     margin-bottom: 50px;
+    border-radius: 5%;
     background-color: lightgray;
 }
 
@@ -203,6 +203,7 @@ div.desc {
 img {
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .thumbnail{
