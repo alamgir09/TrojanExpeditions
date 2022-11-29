@@ -8,14 +8,21 @@ import { createRouter, createWebHistory } from "vue-router";
 import MainPage from "@/views/MainPage.vue";
 import LocationsPage from "@/views/Locations/LocationsPage.vue";
 import ReviewMain from "@/views/Review/ReviewMain.vue";
+import '@mdi/font/css/materialdesignicons.css'
 import ForumMain from "@/views/Forum/ForumMain.vue";
 import LogIn from "@/views/LogIn.vue";
 import RegisterPage from "@/views/RegisterPage.vue";
 
+// import AddLocationButton from "@/views/Locations/AddLocationButton";
+// import AddReviewButton from "@/views/Review/AddReviewButton";
+import TopicPage from "@/views/Forum/TopicPage";
 const vuetify = createVuetify({
-  components,
-  directives,
-});
+    icons: {
+        iconfont: 'mdiSvg', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+    },
+    components,
+    directives,
+})
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
 
@@ -61,14 +68,19 @@ const router = createRouter({
       component: RegisterPage,
       props: true,
     },
+      {
+          path: '/forum/topic1',
+          name: 'topic1',
+          component: TopicPage
+      },
   ],
 });
 
 createApp(App)
-  .component("font-awesome-icon", FontAwesomeIcon)
-  .use(vuetify)
-  .use(router)
-  .mount("#app");
+    .component("font-awesome-icon", FontAwesomeIcon)
+    .use(vuetify)
+    .use(router)
+    .mount('#app')
 /* import specific icons */
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
