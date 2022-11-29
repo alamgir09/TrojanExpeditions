@@ -4,10 +4,12 @@
     <h1>Leavey Library {{datastructure}}</h1>
     <!-- This is the html code below-->
     <div class="introduction">
-        <div class="introduction_inner"> is where I'll include the picture of the study room, and a short introduction of it. Then I'll include the aggregated rankings
-        on the left and the right with the recent reviews
+        <div class="thumbnail">
+            <img :src="require('./../Locations/img/Leavey.jpg')"/>
         </div>
-</div>
+        <div class="desc">Leavey is where I'll include the picture of the study room, and a short introduction of it. Then I'll include the aggregated rankings
+        on the left and the right with the recent reviews</div>
+    </div>
 <div class="summary">
     <h3>SUMMARY</h3>
     <div class="summary_inner">
@@ -89,30 +91,33 @@ h3
 {
     color:orange;
 }
+
+h1{
+    margin-top: 10px;
+}
 .introduction
 {
-    color:black;
-    margin: auto;
-    font-size: 15px;
-    font-weight: bold;
-    width: 600px;
-    height: 400px;
-    border-radius: 5%;
-    box-sizing: border-box;
-    margin-bottom:50px;
+    border: 1px solid #ccc;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
     background-color: lightgray;
+    color:black;
+    
 }
 
 .introduction_inner
 {
+    color: white;
     text-align:center;
     margin: 100px;
-    bottom: 220px;
-    width:500px;
-    height: 100px;
-    left: 365px;
+    bottom: 610px;
+    left: 340px;
     position:absolute;
     border: thin solid black;
+    background-color: black;
+    border-radius: 5%;
 }
 
 .summary
@@ -120,11 +125,11 @@ h3
     font-weight: bold;
     font-size: 20px;
     color:black;
-    width: 600px;
+    width: 550px;
     height: 215px;
     box-sizing: border-box;
     text-align: left;
-    margin-left: 75px;
+    margin-left: 60px;
     margin-bottom: 250px;
     float:left;
     border-radius: 5%;
@@ -141,10 +146,10 @@ h3
     font-weight: bold;
     font-size: 20px;
     color:black;
-    width: 600px;
+    width: 550px;
     height: 215px;
     box-sizing: border-box;
-    margin-left:763px ;
+    margin-left:650px ;
     margin-bottom: 250px;
     border-radius: 5%;
     background-color: lightgray;
@@ -190,4 +195,19 @@ h3
     text-align: left;
 }
 
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail{
+  width: 600 px;
+  height: 400 px;
+  overflow: hidden;
+}
 </style>

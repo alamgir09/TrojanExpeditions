@@ -2,9 +2,9 @@
     <div class="responsive">
   <div class="gallery">
     <div class="thumbnail">
-    <a target="_blank" href="../Review/ReviewMain.vue">
-      <img src="img/Leavey.jpg" alt="Leavey">
-    </a>
+      <router-link to="/reviews">
+        <img :src="require('./img/Leavey.jpg')"/>
+      </router-link>
   </div>
     <div class="desc">Leavey Library</div>
   </div>
@@ -14,20 +14,20 @@
 <div class="responsive">
   <div class="gallery">
     <div class="thumbnail">
-    <a target="_blank" href="img/Hoose.jpg">
-      <img src="img/Hoose.jpg" alt="Hoose">
-    </a>
+    <router-link to="/reviews">
+      <img :src="require('./img/Hoose.jpg')"/>
+    </router-link>
   </div>
-    <div class="desc">Hoose Librar</div>
+    <div class="desc">Hoose Library</div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
   <div class="thumbnail">
-    <a target="_blank" href="img/Doheny.jpg">
-      <img src="img/Doheny.jpg" alt="Doheny">
-    </a>
+    <router-link to="/reviews">
+      <img :src="require('./img/Doheny.jpg')"/>
+    </router-link>
   </div>
     <div class="desc">Doheny Library</div>
   </div>
@@ -35,52 +35,56 @@
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="img/Leavey.jpg">
-      <img src="img/Leavey.jpg" alt="Leavey">
-    </a>
-    <div class="desc">Leavey Library</div>
+    <router-link to="/reviews">
+      <img :src="require('./img/CPA.jpg')"/>
+    </router-link>
+    <div class="desc">CPA</div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="img/Leavey.jpg">
-      <img src="img/Leavey.jpg" alt="Leavey">
-    </a>
-    <div class="desc">Leavey Library</div>
+    <router-link to="/reviews">
+      <img :src="require('./img/Engineering.jpg')"/>
+    </router-link>
+    <div class="desc">Engineering Library</div>
   </div>
 </div>
 
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="img/Leavey.jpg">
-      <img src="img/Leavey.jpg" alt="Leavey">
-    </a>
-    <div class="desc">Leavey Library</div>
+    <router-link to="/reviews">
+      <img :src="require('./img/Annenberg.jpg')"/>
+    </router-link>
+    <div class="desc">Annenberg Hall</div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="img/Leavey.jpg">
-      <img src="img/Leavey.jpg" alt="Leavey">
-    </a>
-    <div class="desc">Leavey Library</div>
+    <router-link to="/reviews">
+      <img :src="require('./img/SAL.jpg')"/>
+    </router-link>
+    <div class="desc">SAL</div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="img/Leavey.jpg">
-      <img src="img/Leavey.jpg" alt="Leavey">
-    </a>
-    <div class="desc">Leavey Library</div>
+    <router-link to="/reviews">
+      <img :src="require('./img/Fertitta.jpg')"/>
+    </router-link>
+    <div class="desc">Fertitta Hall</div>
   </div>
 </div>
 
 <div class="clearfix"></div>
 </template>
+
+<script>
+
+</script>
 
 
 <style scoped>
