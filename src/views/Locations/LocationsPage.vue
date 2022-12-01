@@ -90,6 +90,7 @@
 <style scoped>
 div.gallery {
   border: 1px solid #ccc;
+  border-radius: 5%;
 }
 /*must use 900 600 image*/
 .thumbnail{
@@ -105,6 +106,7 @@ div.gallery:hover {
 div.gallery img {
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 div.desc {
