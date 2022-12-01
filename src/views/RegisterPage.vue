@@ -49,7 +49,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 input {
   border: 1px solid black;
   border-radius: 5px;

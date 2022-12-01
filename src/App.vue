@@ -2,7 +2,9 @@
   <body>
     <div id="app">
       <nav>
-        <div class="menu-item"><router-link to="/">Home</router-link></div>
+        <div class="menu-item">
+          <router-link to="/">Home</router-link>
+        </div>
         <div class="menu-item">
           <router-link to="/locations">Locations</router-link>
         </div>
