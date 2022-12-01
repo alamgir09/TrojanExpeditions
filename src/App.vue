@@ -1,7 +1,7 @@
 <template>
   <body>
-    <div id="app">
-      <nav>
+    <!-- <div id="app"> -->
+      <!-- <nav>
         <div class="menu-item">
           <router-link to="/">Home</router-link>
         </div>
@@ -16,17 +16,20 @@
         </div>
         <PageHeaderLogoDropdownVue style="position: absolute; right: 20px" />
       </nav>
-    </div>
+    </div> -->
+    <PageHeader/>
   </body>
   <router-view />
 </template>
 
 <script>
-import PageHeaderLogoDropdownVue from "./components/PageHeaderLogoDropdown.vue";
+import PageHeader from "./components/PageHeader.vue";
+// import PageHeaderLogoDropdownVue from "./components/PageHeaderLogoDropdown.vue";
 export default {
   props: ["loggedIn"],
   components: {
-    PageHeaderLogoDropdownVue,
+    // PageHeaderLogoDropdownVue,
+    PageHeader
   },
 };
 </script>

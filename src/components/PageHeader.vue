@@ -1,13 +1,13 @@
 <template>
   <div class="nav-bar nullify center">
     <div class="link-box">
-      <h3 class="links"><router-link to="/">FinalProject</router-link></h3>
+      <h3 class="links"><router-link to="/" class="pages">TrojanExpeditions</router-link></h3>
       <h3 class="links">
-        <router-link to="/locations">Locations</router-link>
+        <router-link to="/locations" class="pages">Locations</router-link>
       </h3>
     </div>
     <div class="link-box">
-      <h3 class="links"><router-link to="/forum">Forum</router-link></h3>
+      <h3 class="links"><router-link to="/forum" class="pages">Forum</router-link></h3>
       <PageHeaderLogoDropdownVue class="mr-8" />
     </div>
   </div>
@@ -58,5 +58,9 @@ export default {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+.pages {
+  text-decoration: none;
+  color: white;
 }
 </style>
