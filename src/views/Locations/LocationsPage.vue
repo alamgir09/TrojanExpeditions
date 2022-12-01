@@ -2,7 +2,7 @@
     <div class="responsive">
   <div class="gallery">
     <div class="thumbnail">
-      <router-link to="/reviews">
+      <router-link to="/leavey/reviews">
         <img :src="require('./img/Leavey.jpg')"/>
       </router-link>
   </div>
@@ -14,7 +14,7 @@
 <div class="responsive">
   <div class="gallery">
     <div class="thumbnail">
-    <router-link to="/reviews">
+    <router-link to="/hoose/reviews">
       <img :src="require('./img/Hoose.jpg')"/>
     </router-link>
   </div>
@@ -25,7 +25,7 @@
 <div class="responsive">
   <div class="gallery">
   <div class="thumbnail">
-    <router-link to="/reviews">
+    <router-link to="/doheny/reviews">
       <img :src="require('./img/Doheny.jpg')"/>
     </router-link>
   </div>
@@ -35,7 +35,7 @@
 
 <div class="responsive">
   <div class="gallery">
-    <router-link to="/reviews">
+    <router-link to="/cpa/reviews">
       <img :src="require('./img/CPA.jpg')"/>
     </router-link>
     <div class="desc">CPA</div>
@@ -44,7 +44,7 @@
 
 <div class="responsive">
   <div class="gallery">
-    <router-link to="/reviews">
+    <router-link to="/engineering/reviews">
       <img :src="require('./img/Engineering.jpg')"/>
     </router-link>
     <div class="desc">Engineering Library</div>
@@ -54,7 +54,7 @@
 
 <div class="responsive">
   <div class="gallery">
-    <router-link to="/reviews">
+    <router-link to="/annenberg/reviews">
       <img :src="require('./img/Annenberg.jpg')"/>
     </router-link>
     <div class="desc">Annenberg Hall</div>
@@ -63,7 +63,7 @@
 
 <div class="responsive">
   <div class="gallery">
-    <router-link to="/reviews">
+    <router-link to="/sal/reviews">
       <img :src="require('./img/SAL.jpg')"/>
     </router-link>
     <div class="desc">SAL</div>
@@ -72,7 +72,7 @@
 
 <div class="responsive">
   <div class="gallery">
-    <router-link to="/reviews">
+    <router-link to="/fertitta/reviews">
       <img :src="require('./img/Fertitta.jpg')"/>
     </router-link>
     <div class="desc">Fertitta Hall</div>

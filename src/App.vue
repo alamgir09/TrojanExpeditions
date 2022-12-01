@@ -7,6 +7,9 @@
           <router-link to="/locations">Locations</router-link>
         </div>
         <div class="menu-item">
+          <router-link to="/login">Log In</router-link>
+        </div>
+        <div class="menu-item">
           <router-link to="/forum">Forum</router-link>
         </div>
         <PageHeaderLogoDropdownVue style="position: absolute; right: 20px" />
