@@ -10,7 +10,7 @@
             <div class="desc"> 610 Childs Way, Los Angeles, CA 90089</div>
         </div>
     <div class="summary">
-        <h3>Summary</h3>
+        <h3>SUMMARY</h3>
         <div class="summary_inner">
         <ul>
             Rating: 5 stars overall {{datastructure}}
@@ -29,10 +29,10 @@
         <div class="recent_inner">
             Mary:  Usually so crowded that I don’t even try anymore. Enjoy it if you get a room.
             <br>
-            Quietness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span><span class="fa fa-star "></span>   
-            Cleanliness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+            Quietness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span><span class="fa fa-star unchecked"></span>   
+            &emsp;Cleanliness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
             <br>
-            Overall: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span><span class="fa fa-star "></span>
+            Overall: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span><span class="fa fa-star unchecked"></span>
             <br>
         </div>
     </div>
@@ -41,7 +41,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Clark
+            <h4>Clark</h4>
         </div> 
         <div class="reviewMessage">
             Fertitta is the best, definitely my go to study spot! {{something}}
@@ -62,7 +62,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Yaxi
+            <h4>Yaxi</h4>
         </div> 
         <div class="reviewMessage">
             Just finished an interview in Fertitta, and it went great! Very quiet and no interruptions! {{something}}
@@ -75,7 +75,7 @@
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
             <span class="fa fa-star checked"></span> <span class="fa fa-star checked "></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star "></span>
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
             <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
         </div>
@@ -83,7 +83,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Frank
+            <h4>Frank</h4>
         </div> 
         <div class="reviewMessage">
             Fertitta is the best place to work on campus, and everybody knows it.   {{something}}
@@ -104,7 +104,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Clara
+            <h4>Clara</h4>
         </div> 
         <div class="reviewMessage">
             I love Fertitta but why is it so far! It’s worth it though especially because of the cafe. {{something}}
@@ -115,7 +115,7 @@
         Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         <div class="stars">
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span>
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
             <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
@@ -125,7 +125,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Mohammed
+            <h4>Mohammed</h4>
         </div> 
         <div class="reviewMessage">
             Fertitta is nice but good luck trying to book a room. {{something}}
@@ -136,20 +136,20 @@
         Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         <div class="stars">
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span>
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
         </div>
     </div>
     
-    <div class="big_review">
+    <div class="review">
         <div class="profilePhoto">
-            Matt
+            <h4>Matt</h4>
         </div> 
         <div class="reviewMessage">
-            Fertitta study rooms are the best kept secret on campus! Great place to work in groups or alone, very quiet, highly recommend!    {{something}}
+            Fertitta study rooms are the best kept secret on campus!
         </div>
         &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Quietness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;

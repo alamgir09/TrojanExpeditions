@@ -308,7 +308,6 @@
         position:relative;left:80px;
         background-color: white;
         width: 80%;
-        height:35%;
         border-radius: 3%;
         border: solid 2px black;
         z-index: 0;

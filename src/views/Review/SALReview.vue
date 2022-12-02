@@ -42,7 +42,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Clark
+            <h4>Clark</h4>
         </div> 
         <div class="reviewMessage">
             Not the nicest place in the world, but I love the collaborative environment.  {{something}}
@@ -63,7 +63,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Yaxi
+            <h4>Yaxi</h4>
         </div> 
         <div class="reviewMessage">
             Why do people go to SAL??? SAL is gross. Stay away. {{something}}
@@ -82,30 +82,9 @@
         </div>
     </div>
     
-    <div class="big_review">
-        <div class="profilePhoto">
-            Frank
-        </div> 
-        <div class="reviewMessage">
-            SAL is great if you don’t mind working with your laptop overheating on your lap while 200 people are packed into a room meant for 50.   {{something}}
-        </div>
-        &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-        Quietness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-        Cleanliness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-        Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-        <div class="stars">
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
-        </div>
-    </div>
-    
     <div class="review">
         <div class="profilePhoto">
-            Clara
+            <h4>Clara</h4>
         </div> 
         <div class="reviewMessage">
             I spend more time at SAL than I do in my dorm, in class, and with my mother. I love SAL!  {{something}}
@@ -126,10 +105,10 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Mohammed
+            <h4>Mohammed</h4>
         </div> 
         <div class="reviewMessage">
-            Hate SAL but you’ll still see me here every week. {{something}}
+            Hate SAL but you'll still see me here every week. {{something}}
         </div>
         &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Quietness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
@@ -147,7 +126,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Matt
+            <h4>Matt</h4>
         </div> 
         <div class="reviewMessage">
             SAL rocks! Working with people at SAL is the only thing that keeps me sane.   {{something}}
