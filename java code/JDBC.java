@@ -8,26 +8,27 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class JDBC {
-	static String user = null;
-	static String password = null;
-	static Connection conn = null;
-	public static void connect() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter your user: (usually it is called root)");
-		user = sc.nextLine();
-		System.out.println("Enter your password: (your password set for your DB");
-		password = sc.nextLine();
+	String user = null;
+	String password = null;
+	Connection conn = null;
+	
+	JDBC(String user, String password){
+		this.user = user;
+		this.password = password;
+		connect();
+	}
+	
+	public void connect() {
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/Ratingapp?user=" + user +
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/sys?user=" + user +
 				 "&password=" + password);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		sc.close();
 	}
 
-	public static void createDB(){
+	public void createDB(){
 		try {
 			Statement stmt = conn.createStatement();
 			stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS Ratingapp");
@@ -42,7 +43,7 @@ public class JDBC {
 			//   UNIQUE KEY `LocationName` (`LocationName`)
 			// ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 			stmt.executeUpdate("CREATE TABLE IF NOT EXISTS `Location` ("
-					+ "`LocationID` int NOT NULL,"
+					+ "`LocationID` int NOT NULL AUTO_INCREMENT,"
 					+ " `LocationName` varchar(200) NOT NULL,"
 					+ " PRIMARY KEY (`LocationID`),"
 					+ " UNIQUE KEY `LocationID` (`LocationID`),"
@@ -62,7 +63,7 @@ public class JDBC {
 			//   CONSTRAINT `forummessage_ibfk_2` FOREIGN KEY (`LocationID`) REFERENCES `Location` (`LocationID`)
 			// ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 			stmt.executeUpdate("CREATE TABLE IF NOT EXISTS `ForumMessage` ("
-					+ "`MessageID` int NOT NULL,"
+					+ "`MessageID` int NOT NULL AUTO_INCREMENT,"
 					+ " `MessageContent` varchar(1000) NOT NULL,"
 					+ " `SenderID` int NOT NULL,"
 					+ " `LocationID` int DEFAULT NULL,"
@@ -90,7 +91,7 @@ public class JDBC {
 			// CONSTRAINT `rating_ibfk_2` FOREIGN KEY (`LocationID`) REFERENCES `Location` (`LocationID`)
 			// ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 			stmt.executeUpdate("CREATE TABLE IF NOT EXISTS `Rating` ("
-					+ "`RatingID` int NOT NULL,"
+					+ "`RatingID` int NOT NULL AUTO_INCREMENT,"
 					+ " `RatingValue` decimal(10,0) NOT NULL,"
 					+ " `SenderID` int NOT NULL,"
 					+ " `LocationID` int NOT NULL,"
@@ -118,7 +119,7 @@ public class JDBC {
 			// UNIQUE KEY `Username` (`Username`)
 			// ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 			stmt.executeUpdate("CREATE TABLE IF NOT EXISTS `User` ("
-					+ " `UserID` int NOT NULL,"
+					+ " `UserID` int NOT NULL AUTO_INCREMENT,"
 					+ " `Username` varchar(50) NOT NULL,"
 					+ " `Email` varchar(50) DEFAULT NULL,"
 					+ " `PassWord` varchar(50) NOT NULL,"
@@ -138,7 +139,9 @@ public class JDBC {
 		}
 	}
 
-	public static void insertUser(int id, String un, String em, String pw,
+	// DISCOURAGED to use since DB should have UserID auto incremented
+	// param: UserID, Username, Email, PassWord, Department, Major, GradYear)
+	public void insertUser(int id, String un, String em, String pw,
 				  String dp, String mj, int gy) {
 		try {
 			Statement stmt = conn.createStatement();
@@ -150,8 +153,25 @@ public class JDBC {
 			e.printStackTrace();
 		}
 	}
+	
+	// INSTEAD, use this:
+	public void insertUser(String un, String em, String pw,
+			  String dp, String mj, int gy) {
+	if(checkUsername(un)) return;
+	try {
+		Statement stmt = conn.createStatement();
+		stmt.executeUpdate("INSERT INTO User (Username, Email, PassWord, Department, Major, GradYear) "
+				+ "VALUES ('" + un + "', '" + em + "', '" + pw + "', '" + dp + "', '" + mj + "', " + gy + ")");
+		}
+	catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
 
-	public static void insertRating(int id, int rv, int sid, int lid, String rc, int qrv, int crv) {
+	// DISCOURAGED to use since DB should have RatingID auto incremented
+	// param: RatingID, Rating Value, SenderID, LocationID, RatingContent, QuietnessRatingValue, CleanessRatingValue
+	public void insertRating(int id, int rv, int sid, int lid, String rc, int qrv, int crv) {
 		try {
 			Statement stmt = conn.createStatement();
 			stmt.executeUpdate("INSERT INTO Rating (RatingID, RatingValue, SenderID, LocationID, RatingContent, QuietnessRatingValue, CleanessRatingValue) "
@@ -162,7 +182,35 @@ public class JDBC {
 		}
 	}
 	
-	public static void insertLocation(int lid, String lName){
+	// INSTEAD, use this:
+	// param: Rating Value, SenderID, LocationID, RatingContent, QuietnessRatingValue, CleanessRatingValue
+	public void insertRating(int rv, int sid, int lid, String rc, int qrv, int crv) {
+		try {
+			Statement stmt = conn.createStatement();
+			stmt.executeUpdate("INSERT INTO Rating (RatingValue, SenderID, LocationID, RatingContent, QuietnessRatingValue, CleanessRatingValue) "
+					+ "VALUES (" + rv + ", " + sid + ", " + lid + ", '" + rc + "', " + qrv + ", " + crv + ")");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	// param: Rating Value, SenderID, LocationID, RatingContent
+	public void insertRating(int rv, int sid, int lid, String rc) {
+		try {
+			Statement stmt = conn.createStatement();
+			stmt.executeUpdate("INSERT INTO Rating (RatingValue, SenderID, LocationID, RatingContent) "
+					+ "VALUES (" + rv + ", " + sid + ", " + lid + ", '" + rc + ")");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	// DISCOURAGED to use since DB should have LocationID auto incremented
+	// param: LocationID, LocationName
+	public void insertLocation(int lid, String lName){
+		if(checkLocation(lName)) return;
 		try {
 			Statement stmt = conn.createStatement();
 			stmt.executeUpdate("INSERT INTO Location (LocationID, LocationName) "
@@ -172,19 +220,49 @@ public class JDBC {
 			e.printStackTrace();
 		}
 	}
-
-	public static void insertForumMessage(int id, int sid, int lid, String c, String t) {
+	
+	// INSTEAD, use this:
+	// param: LocationName
+	public void insertLocation(String lName){
+		if(checkLocation(lName)) return;
 		try {
 			Statement stmt = conn.createStatement();
-			stmt.executeUpdate("INSERT INTO ForumMessage (ForumMessageID, SenderID, LocationID, Content, Time) "
-					+ "VALUES (" + id + ", " + sid + ", " + lid + ", '" + c + "', '" + t + "')");
+			stmt.executeUpdate("INSERT INTO Location (LocationName) "
+					+ "VALUES ('" + lName + "')");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	public static boolean checkUser(String un, String pw) {
+	// DISCOURAGED to use since DB should have ForumMessageID auto incremented
+	// param: ForumMessageID, SenderID, LocationID, Content
+	public void insertForumMessage(int id, int sid, int lid, String c) {
+		try {
+			Statement stmt = conn.createStatement();
+			stmt.executeUpdate("INSERT INTO ForumMessage (ForumMessageID, SenderID, LocationID, MessageContent) "
+					+ "VALUES (" + id + ", " + sid + ", " + lid + ", '" + c + "')");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	// INSTEAD, use this:
+	// param: SenderID, LocationID, Content
+	public void insertForumMessage(int sid, int lid, String c) {
+		try {
+			Statement stmt = conn.createStatement();
+			stmt.executeUpdate("INSERT INTO ForumMessage (SenderID, LocationID, MessageContent) "
+					+ "VALUES (" + sid + ", " + lid + ", '" + c + "')");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	// param: Username, PassWord
+	public boolean checkUser(String un, String pw) {
 		try {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM User WHERE Username = '" + un + "' AND PassWord = '" + pw + "'");
@@ -198,7 +276,8 @@ public class JDBC {
 		return false;
 	}
 
-	public static boolean checkUsername(String un) {
+	// param: Username
+	public boolean checkUsername(String un) {
 		try {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM User WHERE Username = '" + un + "'");
@@ -212,7 +291,8 @@ public class JDBC {
 		return false;
 	}
 
-	public static boolean checkEmail(String em) {
+	// param: Email
+	public boolean checkEmail(String em) {
 		try {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM User WHERE Email = '" + em + "'");
@@ -226,10 +306,11 @@ public class JDBC {
 		return false;
 	}
 
-	public static boolean checkLocation(String locationName){
+	// param: locationName
+	public boolean checkLocation(String locationName){
 		try {
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT * FROM Location WHERE Name = '" + locationName + "'");
+			ResultSet rs = stmt.executeQuery("SELECT * FROM Location WHERE LocationName = '" + locationName + "'");
 			if (rs.next()) {
 				return true;
 			}
@@ -240,7 +321,8 @@ public class JDBC {
 		return false;
 	}
 
-	public static User getUser(String un) {
+	// param: Username
+	public User getUser(String un) {
 		try {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM User WHERE Username = '" + un + "'");
@@ -258,7 +340,7 @@ public class JDBC {
 	}
 
 	// display ratings for one location
-	public static ArrayList<Rating> getRatings(int lid) {
+	public ArrayList<Rating> getRatings(int lid) {
 		ArrayList<Rating> ratings = new ArrayList<Rating>();
 		try {
 			Statement stmt = conn.createStatement();
@@ -277,14 +359,14 @@ public class JDBC {
 	}
 
 	// display forum messages for one location
-	public static ArrayList<ForumMessage> getForumMessages(int lid) {
+	public ArrayList<ForumMessage> getForumMessages(int lid) {
 		ArrayList<ForumMessage> forumMessages = new ArrayList<ForumMessage>();
 		try {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM ForumMessage WHERE LocationID = " + lid);
 			while (rs.next()) {
-				ForumMessage forumMessage = new ForumMessage(rs.getInt("ForumMessageID"), rs.getInt("SenderID"),
-					rs.getString("Content"), rs.getInt("LocationID"));
+				ForumMessage forumMessage = new ForumMessage(rs.getInt("MessageID"), rs.getInt("SenderID"),
+					rs.getString("MessageContent"), rs.getInt("LocationID"));
 				forumMessages.add(forumMessage);
 			}
 		} catch (SQLException e) {
@@ -294,7 +376,24 @@ public class JDBC {
 		return forumMessages;
 	}
 
-	public static ArrayList<Location> getLocations() {
+	public ArrayList<ForumMessage> getAllForumMessages() {
+		ArrayList<ForumMessage> forumMessages = new ArrayList<ForumMessage>();
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM ForumMessage");
+			while (rs.next()) {
+				ForumMessage forumMessage = new ForumMessage(rs.getInt("MessageID"), rs.getInt("SenderID"),
+					rs.getString("MessageContent"), rs.getInt("LocationID"));
+				forumMessages.add(forumMessage);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return forumMessages;
+	}
+
+	public ArrayList<Location> getLocations() {
 		ArrayList<Location> locations = new ArrayList<Location>();
 		try {
 			Statement stmt = conn.createStatement();
@@ -311,46 +410,57 @@ public class JDBC {
 		return locations;
 	}
 
+	// Some helper functions
 
-	// public static void main (String[] args) {
-	// 	Connection conn = null;
-	// 	Statement st = null;
-	// 	PreparedStatement ps = null;
-	// 	ResultSet rs = null;
-	// 	try {
-	// 		st = conn.createStatement();
-	// 		rs = st.executeQuery("select Classname, COUNT(Classname) as `Number of students`\r\n"
-	// 				+ "from studentinfo natural join grades\r\n"
-	// 				+ "group by Classname\r\n"
-	// 				+ "order by COUNT(classname);");
-	// 		while (rs.next()) {
-	// 			System.out.println(rs.getString("classname") + ' ' + rs.getString("number of students"));
-	// 		}
-	// 		System.out.println();
+	// getUserID from username
+	public int getUserID(String un) {
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM User WHERE Username = '" + un + "'");
+			if (rs.next()) {
+				return rs.getInt("UserID");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return -1;
+	}
 
-	// 		rs = st.executeQuery("Select * from studentinfo natural join grades");
-	// 		while (rs.next()) {
-	// 			System.out.println(rs.getString("classname") + ' ' + rs.getString("name") + ' ' + rs.getString("grade"));
-	// 		}
-	// 	} catch (SQLException sqle) {
-	// 		System.out.println ("SQLException: " + sqle.getMessage());
-	// 	} finally {
-	// 		try {
-	// 			if (rs != null) {
-	// 				rs.close();
-	// 			}
-	// 			if (st != null) {
-	// 				st.close();
-	// 			}
-	// 			if (ps != null) {
-	// 				ps.close();
-	// 			}
-	// 			if (conn != null) {
-	// 				conn.close();
-	// 			}
-	// 		} catch (SQLException sqle) {
-	// 			System.out.println("sqle: " + sqle.getMessage());
-	// 		}
-	// 	}
-	// }
+	// getLocationID from locationName
+	public int getLocationID(String locationName) {
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM Location WHERE LocationName = '" + locationName + "'");
+			if (rs.next()) {
+				return rs.getInt("LocationID");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return -1;
+	}
+
+
+	public static void main (String[] args) {
+		System.out.println("This is the unit test to check we have connected to mySQL correctly.");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your user: (usually it is called root)");
+		String user = sc.nextLine();
+		System.out.println("Enter your password: (your password set for your DB)");
+		String password = sc.nextLine();
+		JDBC j = new JDBC(user, password);
+		j.createDB();
+		j.insertUser("frank", "frankhe@usc.edu", "fffhhheee", "CS", "CSCI", 2025);
+		j.insertLocation("Leavey");
+		System.out.println(j.checkUser("frank", "fffhhheee"));
+		System.out.println(j.checkUser("jacob", "jacobobob"));
+		System.out.println(j.checkUsername("frank"));
+		System.out.println(j.checkUsername("jacob"));
+		j.insertRating(5, 5, 1, "goodgood", 0, 0);
+		j.insertForumMessage(5, 1, "Such a good place to study!");
+		System.out.println(j.getAllForumMessages());
+		
+	}
 }
