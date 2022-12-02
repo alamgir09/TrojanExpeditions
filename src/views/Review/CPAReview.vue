@@ -30,7 +30,7 @@
             Mary: Don’t come here. Just don’t.
             <br>
             Quietness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span><span class="fa fa-star"></span>   
-            &emsp;Cleanliness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span><span class="fa fa-star "></span>
+            Cleanliness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span><span class="fa fa-star "></span>
             <br>
             Overall: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span><span class="fa fa-star "></span>
             <br>
