@@ -210,7 +210,12 @@
     {
         color:orange;
     }
-    
+
+    .unchecked
+    {
+        color: white;
+    }
+
     h1{
         margin-top: 10px;
     }
@@ -253,11 +258,12 @@
         float:left;
         border-radius: 5%;
         background-color: lightgray;
+        padding-top:20px;
     }
     
     .summary_inner
     {
-        margin-left: 10px;
+        margin-left: 23%;
     }
     
     .recent
@@ -272,11 +278,13 @@
         margin-bottom: 50px;
         border-radius: 5%;
         background-color: lightgray;
+        padding-top:20px;
     }
     
     .recent_inner
     {
-        margin-left: 10px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .review
     {
@@ -284,48 +292,50 @@
         color:black;
         font-weight: bold;
         height: 170px;
-        text-align: center;
         box-sizing: border-box;
         margin:25px;
         margin-left: 75px;
         margin-right: 75px;
         background-color: lightgray;
-    }
-    .big_review
-    {
-        font-size:20px;
-        color:black;
-        font-weight: bold;
-        height: 200px;
-        text-align: center;
-        box-sizing: border-box;
-        margin:25px;
-        margin-left: 75px;
-        margin-right: 75px;
-        background-color: lightgray;
+        padding-top: 30px;
     }
     
     .reviewMessage
     {
-        padding-top: 15px;
-        padding-bottom: 40px;
-        padding-left: 40;
-        padding-right: 40;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        margin-left: 70px;
         font-weight: normal;
+        position:relative;left:80px;
+        background-color: white;
+        width: 80%;
+        height:35%;
+        border-radius: 3%;
+        border: solid 2px black;
     }
     
     .profilePhoto
     {
         float: left;
-        margin-top: 15px;
         margin-left: 10px;
         width: 110px;
         height: 110px;
         border-radius: 100%;
-        background-color: white;
-        background-image: something;
-
+        background-image: url("tommytrojan.png");
+        background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+        border: solid 2px;
+        border-color: black;
+        text-align: center;
+        position:relative;bottom:15px;
+        position:relative;left:10px;
     }
+    
+    .profilePhoto h4{
+        position:relative;top:110px;
+    }
+ 
     
     .stars
     {

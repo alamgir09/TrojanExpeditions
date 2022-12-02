@@ -37,7 +37,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Clark
+            <h4>Clark</h4>
         </div> 
         <div class="reviewMessage">
             Annenberg is the best! Everyone is so friendly I am always in a good mood here.  {{something}}
@@ -58,7 +58,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Yaxi
+            <h4>Yaxi</h4>
         </div> 
         <div class="reviewMessage">
             Just visited Annenberg for the first time. Felt more like a dining hall than a library.. {{something}}
@@ -79,7 +79,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Frank
+            <h4>Frank</h4>
         </div> 
         <div class="reviewMessage">
             Don't come here much it's too loud.   {{something}}
@@ -100,7 +100,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Clara
+            <h4>Clara</h4>
         </div> 
         <div class="reviewMessage">
             Just went to Annenberg for the first time and I loved it! Will definitely be coming back.  {{something}}
@@ -121,6 +121,7 @@
     
     <div class="review">
         <div class="profilePhoto">
+            <h4>Mohammed</h4>
         </div> 
         <div class="reviewMessage">
             My girlfriend loves this place but it's too crowded for me. {{something}}
@@ -141,7 +142,7 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Matt
+            <h4>Matt</h4>
         </div> 
         <div class="reviewMessage">
             Why anybody goes to Annenberg is beyond me, this place sucks.   {{something}}
@@ -301,12 +302,17 @@
         padding-bottom: 15px;
         margin-left: 70px;
         font-weight: normal;
+        position:relative;left:80px;
+        background-color: white;
+        width: 80%;
+        height:35%;
+        border-radius: 3%;
+        border: solid 2px black;
     }
     
     .profilePhoto
     {
         float: left;
-        margin-top: 15px;
         margin-left: 10px;
         width: 110px;
         height: 110px;
@@ -317,7 +323,15 @@
 		background-position: center;
         border: solid 2px;
         border-color: black;
+        text-align: center;
+        position:relative;bottom:15px;
+        position:relative;left:10px;
     }
+    
+    .profilePhoto h4{
+        position:relative;top:110px;
+    }
+ 
     
     .stars
     {
