@@ -15,14 +15,6 @@
                             <input type="checkbox" class="sort sort-css" checked>
                             Hottest
                           </label>
-                          <label class="normal-sort">
-                            <input type="checkbox" class="sort sort-css" checked>
-                            Latest to oldest
-                          </label>
-                          <label class="normal-sort">
-                            <input type="checkbox" class="sort sort-css" checked>
-                            Most views
-                          </label>
                         </div>
                       </div>
                       <v-btn class="mx-2" fab dark color="blue-grey" @click="newPost">
@@ -32,41 +24,67 @@
                       </v-btn>
                     </div>
                   </div>
-                  <div class="topic-list-container">
+                  <div  class="topic-list-container2" >
                     <div class="topic-list-content">
                       <div>
                         <div class="topic-item-wrap">
                           <div class="topic-item">
                             <a href="" class="topic-info">
-                              <img class="avatar"  src="">
+                              <img class="avatar" :src="image">
                             </a>
                             <div class="topic-title-wrapper">
                               <div class="item-header">
-                                <router-link to="/forum/topic1">
+                                <router-link to="/forum/topic2">
                                   <div class="title-container">
                                     <div class="title">
-                                      Topic 1
+                                      This is an amazing website.
                                     </div>
                                   </div>
                                 </router-link>
                               </div>
                               <div class="topic-info">
                                 <span>
+                                  <router-link to="">
+                                    Yaxi Zeng
+                                  </router-link>
                                   <span>
-                                    created at:
-                                  </span>
-                                  <span>
-                                    Last reply:
+                                    created at: 11 28, 2022 18:41
                                   </span>
                                 </span>
                               </div>
                             </div>
-                            <div class="wrapper">
-                              <div class="icon-wrapper">
-
-                                <div class="top">
-                                  99
-                                </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="post2" class="topic-list-container" data-show="false">
+                    <div class="topic-list-content">
+                      <div>
+                        <div class="topic-item-wrap">
+                          <div class="topic-item">
+                            <a href="" class="topic-info">
+                              <img class="avatar" :src="image">
+                            </a>
+                            <div class="topic-title-wrapper">
+                              <div class="item-header">
+                                <router-link to="/forum/topic1">
+                                  <div class="title-container">
+                                    <div class="title">
+                                      Hello CS 201!
+                                    </div>
+                                  </div>
+                                </router-link>
+                              </div>
+                              <div class="topic-info">
+                                <span>
+                                  <router-link to="">
+                                    Frank He
+                                  </router-link>
+                                  <span>
+                                    created at: 11 27, 2022 11:27
+                                  </span>
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -100,7 +118,7 @@
                      :disabled="loading3"
                      color="blue-grey"
                      class="post-button white--text"
-                     @click="loader = 'loading3'">
+                     @click="showPost">
                 Post
                 <v-icon class="send-icon">
                   mdi-send
@@ -108,6 +126,15 @@
               </v-btn>
             </div>
           </div>
+          <v-textarea
+            clearable
+            variant="outlined"
+            clear-icon="mdi-close-circle"
+            rows="12"
+            counter="250"
+            :rules="rules"
+          >
+          </v-textarea>
         </div>
       </div>
     </div>
@@ -117,6 +144,8 @@
 <script>
 export default {
   data: () => ({
+    image: require("@/assets/tommytrojan.png"),
+    rules : [v => v.length <= 250 || 'Max 250 characters!'],
     loader: null,
     loading3: false,
     closed: false,
@@ -130,6 +159,11 @@ export default {
     }
   }),
   methods: {
+    showPost() {
+      const page = document.querySelector("#post2");
+      page.dataset.show = "true";
+      this.closePost();
+    },
     newPost() {
       const page = document.querySelector("#post");
       page.dataset.appear = "true";
@@ -143,6 +177,9 @@ export default {
 </script>
 
 <style scoped>
+.topic-list-container[data-show='false'] {
+  display: none;
+}
 .send-icon {
   margin-left: 5px;
 }
@@ -563,38 +600,11 @@ input:not([type='range']), label, select, summary, textarea {
 .search-wrapper1 .search-input {
   width: 100%;
 }
-.search-wrapper2 {
-  display: inline-block;
-  position: relative;
-}
+
 .search-wrapper1 .search-box1 input {
   padding-right: 32px;
 }
-.search-box2 .input {
-  padding: 6.3px 10px;
-  font-size: 12;
-}
-.input {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color: #546e7a;
-  border: 1px solid #cfd8dc;
-  border-radius: 3px;
-  font-weight: 300;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  -webkit-transition: 0.4s all;
-  -o-transition: 0.4s all;
-  transition: 0.4s all;
-}
-.input:focus {
-  color: #263238;
-  border-color: #263238;
-  outline: none !important;
-  -webkit-box-shadow: 0 0 0 2px rgb(251 192 46 / 40%);
-  box-shadow: 0 0 0 2px rgb(251 192 46 / 40%);
-}
+
 button, input {
   overflow: visible;
 }

@@ -24,6 +24,8 @@ import RegisterPage from "@/views/RegisterPage.vue";
 // import AddLocationButton from "@/views/Locations/AddLocationButton";
 // import AddReviewButton from "@/views/Review/AddReviewButton";
 import TopicPage from "@/views/Forum/TopicPage";
+import TopicPage2 from "@/views/Forum/TopicPage2";
+
 const vuetify = createVuetify({
     icons: {
         iconfont: 'mdiSvg', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
@@ -171,11 +173,16 @@ const router = createRouter({
       component: RegisterPage,
       props: true,
     },
-      {
-          path: '/forum/topic1',
-          name: 'topic1',
-          component: TopicPage
-      },
+    {
+      path: '/forum/topic1',
+      name: 'topic1',
+      component: TopicPage
+    },
+    {
+      path: '/forum/topic2',
+      name: 'topic2',
+      component: TopicPage2
+    },
   ],
 });
 

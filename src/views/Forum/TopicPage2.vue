@@ -14,10 +14,10 @@
                       Back
                     </v-btn>
                   </router-link>
-                  </div>
+                </div>
                 <div class="title-container ">
                   <h5 class="title">
-                    Hello CS 201!
+                    This is an amazing website.
                   </h5>
                 </div>
                 <div class="action-panel">
@@ -76,16 +76,16 @@
                       <div>
                         <div class="user-info">
                           <span class="user-name">
-                            Frank He
+                            Yaxi Zeng
                           </span>
                         </div>
                         <div class="post-info">
-                          created at: 11 27, 2022 11:27
+                          created at: 11 28, 2022 18:41
                         </div>
                       </div>
                     </div>
                     <div class="content-area">
-                      <p>CS 201 by Marco Papa is my most favorite class at USC ever!</p>
+                      <p>Welcome everyone! This is the final project of class CSCI 201. Our group developed this website using Java, HTML, CSS, and JavaScript to provide you with the best experience in finding a comfortable place to study at USC</p>
                     </div>
                   </div>
                 </div>
@@ -97,12 +97,7 @@
                       </span>
                     </div>
                     <div class="comment-sort">
-                      <v-btn variant="text">
 
-                      </v-btn>
-                      <v-btn variant="text">
-
-                      </v-btn>
                       <v-btn variant="text">
 
                       </v-btn>
@@ -111,20 +106,68 @@
                   <div class="comment-container2">
                     <div class="comment">
                       <div class="editor">
-                        <v-textarea auto-grow rows="2" counter="50">
+                        <v-textarea auto-grow rows="2" counter="50" >
 
                         </v-textarea>
                         <div class="action-area">
                           <div class="blank-space">
 
                           </div>
-                          <v-btn color="blue-grey" class="comment-post-button">
+                          <v-btn color="blue-grey" class="comment-post-button" @click="showComment">
                             Post
                           </v-btn>
                         </div>
                       </div>
                     </div>
+                    <div class="comment-list">
+                      <div id="comment2" class="comment2" data-document-id data-show-comment1="false">
+                        <div class="root2">
+                          <v-btn
+                            class="comment-avatar"
+                            variant="text"
+                          >
+                            <img class="avatar" :src="image">
+                          </v-btn>
+                          <div>
+                            <div class="user-info">
+                              <span class="user-name">
+                                Frank He
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment-content">
+                          <p>Good job guys!</p>
+                        </div>
+                        <div class="comment-action">
+                          <v-btn
+                            variant="text"
+                          >
+                          </v-btn>
+                        </div>
+                        <div id="sub-comment" class="sub-comment" data-is-show="false">
+                          <div class="editor">
+                            <v-textarea auto-grow rows="2" counter="50">
 
+                            </v-textarea>
+                            <div class="action-area">
+                              <div class="blank-space">
+
+                              </div>
+                              <v-btn
+                                variant="text"
+                                @click="closeReply"
+                                class="comment-close-button">
+                                cancel
+                              </v-btn>
+                              <v-btn color="blue-grey" class="comment-post-button">
+                                Post
+                              </v-btn>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -145,6 +188,10 @@ export default {
     image: require("@/assets/tommytrojan.png"),
   }),
   methods: {
+    showComment () {
+      const page = document.querySelector("#comment2");
+      page.dataset.showComment1 = "true";
+    },
     inc() {
       const page = document.getElementById('count');
       let num = page.innerHTML;
@@ -170,6 +217,9 @@ export default {
 </script>
 
 <style scoped>
+.comment2[data-show-comment1='false'] {
+  display: none;
+}
 .sub-comment[data-is-show='false'] {
   display: none;
 }
