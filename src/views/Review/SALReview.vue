@@ -11,7 +11,7 @@
             <div class="desc"> 941 Bloom Walk, Los Angeles, CA 90089</div>
         </div>
     <div class="summary">
-        <h3>SUMMARY</h3>
+        <h3>Summary</h3>
         <div class="summary_inner">
         <ul>
             Rating: 5 stars overall {{datastructure}}
