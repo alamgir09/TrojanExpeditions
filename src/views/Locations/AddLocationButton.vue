@@ -86,21 +86,20 @@
     </div>
     <div v-if="formSubmitted">
       <div class="responsive">
-    <div class="gallery">
-      <div class="thumbnail">
-      <router-link to="/hoose/reviews">
-        <img :src="image" style="height: object-fit;"/>
-      </router-link>
-    </div>
-    <div class="desc">{{name}}</div>
-  </div>
-</div>
+        <div class="gallery">
+          <div class="thumbnail">
+            <router-link to="/hoose/reviews">
+              <img :src="image" style="height: object-fit" />
+            </router-link>
+          </div>
+          <div class="desc">{{ name }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "App",
   components: {},
@@ -153,7 +152,7 @@ div.gallery {
   border: 1px solid #ccc;
 }
 /*must use 900 600 image*/
-.thumbnail{
+.thumbnail {
   width: 600 px;
   height: 400 px;
   overflow: hidden;
@@ -218,6 +217,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .modal {
@@ -278,6 +278,6 @@ input {
 
 .add-button {
   margin-top: 20px;
-  margin-left: 20px
+  margin-left: 20px;
 }
 </style>
