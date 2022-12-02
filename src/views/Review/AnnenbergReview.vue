@@ -121,7 +121,6 @@
     
     <div class="review">
         <div class="profilePhoto">
-            Mohammed
         </div> 
         <div class="reviewMessage">
             My girlfriend loves this place but it's too crowded for me. {{something}}
@@ -298,8 +297,9 @@
     
     .reviewMessage
     {
-        padding-bottom: 40px;
-        margin-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        margin-left: 70px;
         font-weight: normal;
     }
     
@@ -311,7 +311,12 @@
         width: 110px;
         height: 110px;
         border-radius: 100%;
-        background-color: black;
+        background-image: url("tommytrojan.png");
+        background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+        border: solid 2px;
+        border-color: black;
     }
     
     .stars
