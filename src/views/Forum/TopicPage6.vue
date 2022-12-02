@@ -17,7 +17,7 @@
                   </div>
                 <div class="title-container ">
                   <h5 class="title">
-                    Why does Leavey smell so bad??? 
+                    Question about Fertitta study rooms
                   </h5>
                 </div>
                 <div class="action-panel">
@@ -54,7 +54,7 @@
                         </v-btn>
                       </div>
                       <div class="count">
-                        78
+                        6
                       </div>
                       <div class="upvote">
                         <v-btn
@@ -70,16 +70,16 @@
                       <div>
                         <div class="user-info">
                           <span class="user-name">
-                            smellycoder35079
+                            themarsha11man
                           </span>
                         </div>
                         <div class="post-info">
-                          Created at: 11:03am on 11/29/2022
+                          Created at: 3:59pm on 11/25/2022
                         </div>
                       </div>
                     </div>
                     <div class="content-area">
-                      <p>Can't describe how awful it is</p>
+                      <p>How do I book a room at Fertitta?</p>
                     </div>
                   </div>
                 </div>
@@ -129,13 +129,13 @@
                           <div>
                             <div class="user-info">
                               <span class="user-name">
-                                claracodes999
+                                mattrocks1
                               </span>
                             </div>
                           </div>
                         </div>
                         <div class="comment-content">
-                          <p>For real! I was trying to code but it was unbearable</p>
+                          <p>Go to your marshall account</p>
                           
                         </div>
                         <div class="comment-action">
@@ -169,271 +169,7 @@
                           </div>
                         </div>
                       </div>
-
-                      <v-divider></v-divider>
-                      <div class = "reply-comment2">
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  smellycoder35079
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Same here. Couldn't get anything done.</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <v-divider></v-divider>
-                      <div class = "reply-comment3">
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  yax11111
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Maybe it was you??</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <v-divider></v-divider>
-                      <div class = "reply-comment2">
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  mattrocks1
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Coding at SAL if you want to join, not too crowded!</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-                        <v-divider></v-divider>
-
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  mohammed88
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Been here all day I don't smell a thing</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <v-divider></v-divider>
-                      <div class = "reply-comment2">
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  mary686
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Me neither. Stop being so dramatic.</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-                        <v-divider></v-divider>
-
+                     
                     </div>
                   </div>
                 </div>
@@ -509,11 +245,6 @@ export default {
   padding-left: 80px;
   margin-top: 5px;
 }
-.reply-comment3{
-  padding-left: 120px;
-  margin-top: 5px;
-}
-
 .editor .action-area .blank-space {
   -webkit-box-flex: 1;
   -ms-flex: 1;

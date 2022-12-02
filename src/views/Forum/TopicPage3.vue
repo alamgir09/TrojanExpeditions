@@ -17,7 +17,7 @@
                   </div>
                 <div class="title-container ">
                   <h5 class="title">
-                    Why does Leavey smell so bad??? 
+                    Has Fertitta ever not been completely booked?
                   </h5>
                 </div>
                 <div class="action-panel">
@@ -54,7 +54,7 @@
                         </v-btn>
                       </div>
                       <div class="count">
-                        78
+                        22
                       </div>
                       <div class="upvote">
                         <v-btn
@@ -70,16 +70,16 @@
                       <div>
                         <div class="user-info">
                           <span class="user-name">
-                            smellycoder35079
+                            themarsha11man
                           </span>
                         </div>
                         <div class="post-info">
-                          Created at: 11:03am on 11/29/2022
+                          Created at: 8:37pm on 11/29/2022
                         </div>
                       </div>
                     </div>
                     <div class="content-area">
-                      <p>Can't describe how awful it is</p>
+                      <p>Every time I go every room is full!</p>
                     </div>
                   </div>
                 </div>
@@ -129,13 +129,13 @@
                           <div>
                             <div class="user-info">
                               <span class="user-name">
-                                claracodes999
+                                frankthetank3
                               </span>
                             </div>
                           </div>
                         </div>
                         <div class="comment-content">
-                          <p>For real! I was trying to code but it was unbearable</p>
+                          <p>Maybe try booking a room ahead of time</p>
                           
                         </div>
                         <div class="comment-action">
@@ -169,113 +169,7 @@
                           </div>
                         </div>
                       </div>
-
-                      <v-divider></v-divider>
-                      <div class = "reply-comment2">
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  smellycoder35079
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Same here. Couldn't get anything done.</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <v-divider></v-divider>
-                      <div class = "reply-comment3">
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  yax11111
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Maybe it was you??</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-
+                      
                         <v-divider></v-divider>
                       <div class = "reply-comment2">
                         <div class="comment2" data-document-id>
@@ -288,13 +182,13 @@
                             <div>
                               <div class="user-info">
                                 <span class="user-name">
-                                  mattrocks1
+                                  themarsha11man
                                 </span>
                               </div>
                             </div>
                           </div>
                           <div class="comment-content">
-                            <p>Coding at SAL if you want to join, not too crowded!</p>
+                            <p>Didn't know you could do this, can you send a link?</p>
                           </div>
                           <div class="comment-action">
                             <v-btn
@@ -340,13 +234,13 @@
                             <div>
                               <div class="user-info">
                                 <span class="user-name">
-                                  mohammed88
+                                  clark4prez
                                 </span>
                               </div>
                             </div>
                           </div>
                           <div class="comment-content">
-                            <p>Been here all day I don't smell a thing</p>
+                            <p>That's crazy how study spaces are crowded right before finals</p>
                           </div>
                           <div class="comment-action">
                             <v-btn
@@ -381,7 +275,7 @@
                         </div>
 
                         <v-divider></v-divider>
-                      <div class = "reply-comment2">
+                      <div class = "comment2">
                         <div class="comment2" data-document-id>
                           <div class="root2">
                             <v-btn
@@ -398,7 +292,7 @@
                             </div>
                           </div>
                           <div class="comment-content">
-                            <p>Me neither. Stop being so dramatic.</p>
+                            <p>Try finding a room at doheny! Very quiet there.</p>
                           </div>
                           <div class="comment-action">
                             <v-btn

@@ -14,31 +14,34 @@
                       Back
                     </v-btn>
                   </router-link>
-                  </div>
+                </div>
                 <div class="title-container ">
                   <h5 class="title">
-                    Why does Leavey smell so bad??? 
+                    This is an amazing website.
                   </h5>
                 </div>
                 <div class="action-panel">
                   <v-row>
                     <v-btn
-                      class="ma-2"
+                      :color="HeartisDisabled ? '#FE8E86' : '#DCDCDC'"
+                      @click="HeartisDisabled = !HeartisDisabled"
+                      class="heart"
                       variant="text"
                       icon="mdi-heart"
-                      color="#FE8E86"
                     ></v-btn>
                     <v-btn
-                      class="ma-2"
+                      :color="FavisDisabled ? '#FFCB4C' : '#DCDCDC'"
+                      @click="FavisDisabled = !FavisDisabled"
+                      class="fav"
                       variant="text"
                       icon="mdi-star-plus"
-                      color="#FFCB4C"
                     ></v-btn>
                     <v-btn
-                      class="ma-2"
+                      :color="LikeisDisabled ? 'blue-lighten-2' : '#DCDCDC'"
+                      @click="LikeisDisabled = !LikeisDisabled"
+                      class="like"
                       variant="text"
                       icon="mdi-thumb-up"
-                      color="blue-lighten-2"
                     ></v-btn>
                   </v-row>
                 </div>
@@ -50,15 +53,18 @@
                       <div class="upvote">
                         <v-btn
                           icon="mdi-arrow-up-bold"
+                          @click="inc"
                         >
                         </v-btn>
                       </div>
-                      <div class="count">
-                        78
+                      <div id="count"
+                           class="count">
+                        0
                       </div>
                       <div class="upvote">
                         <v-btn
                           icon="mdi-arrow-down-bold"
+                          @click="dec"
                         >
                         </v-btn>
                       </div>
@@ -66,20 +72,20 @@
                   </div>
                   <div class="post-area">
                     <div class="root">
-                      <div class="avatar"></div>
+                      <img class="avatar" :src="image">
                       <div>
                         <div class="user-info">
                           <span class="user-name">
-                            smellycoder35079
+                            yax11111
                           </span>
                         </div>
                         <div class="post-info">
-                          Created at: 11:03am on 11/29/2022
+                          Created at: 12:04pm on 11/26/2022
                         </div>
                       </div>
                     </div>
                     <div class="content-area">
-                      <p>Can't describe how awful it is</p>
+                      <p>Welcome everyone! This is the final project of class CSCI 201. Our group developed this website using Java, HTML, CSS, and JavaScript to provide you with the best experience in finding a comfortable place to study at USC</p>
                     </div>
                   </div>
                 </div>
@@ -91,60 +97,53 @@
                       </span>
                     </div>
                     <div class="comment-sort">
+
                       <v-btn variant="text">
-                        Most votes
-                      </v-btn>
-                      <v-btn variant="text">
-                        Latest to oldest
-                      </v-btn>
-                      <v-btn variant="text">
-                        Oldest to latest
+
                       </v-btn>
                     </div>
                   </div>
                   <div class="comment-container2">
                     <div class="comment">
                       <div class="editor">
-                        <v-textarea auto-grow rows="2" counter="50">
+                        <v-textarea auto-grow rows="2" counter="50" >
 
                         </v-textarea>
                         <div class="action-area">
                           <div class="blank-space">
 
                           </div>
-                          <v-btn color="blue-grey" class="comment-post-button">
+                          <v-btn color="blue-grey" class="comment-post-button" @click="showComment">
                             Post
                           </v-btn>
                         </div>
                       </div>
                     </div>
                     <div class="comment-list">
-                      <div class="comment2" data-document-id>
+                      <div id="comment2" class="comment2" data-document-id data-show-comment1="false">
                         <div class="root2">
                           <v-btn
                             class="comment-avatar"
                             variant="text"
-                            icon="tommytrojan.png">
+                            icon="tommytrojan.png"
+                          >
+                            
                           </v-btn>
                           <div>
                             <div class="user-info">
                               <span class="user-name">
-                                claracodes999
+                                frankthetank3
                               </span>
                             </div>
                           </div>
                         </div>
                         <div class="comment-content">
-                          <p>For real! I was trying to code but it was unbearable</p>
-                          
+                          <p>Good job guys!</p>
                         </div>
                         <div class="comment-action">
                           <v-btn
                             variant="text"
-                            prepend-icon="mdi-reply"
-                            @click="openReply"
                           >
-                            Reply
                           </v-btn>
                         </div>
                         <div id="sub-comment" class="sub-comment" data-is-show="false">
@@ -169,271 +168,6 @@
                           </div>
                         </div>
                       </div>
-
-                      <v-divider></v-divider>
-                      <div class = "reply-comment2">
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  smellycoder35079
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Same here. Couldn't get anything done.</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <v-divider></v-divider>
-                      <div class = "reply-comment3">
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  yax11111
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Maybe it was you??</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <v-divider></v-divider>
-                      <div class = "reply-comment2">
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  mattrocks1
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Coding at SAL if you want to join, not too crowded!</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-                        <v-divider></v-divider>
-
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  mohammed88
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Been here all day I don't smell a thing</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <v-divider></v-divider>
-                      <div class = "reply-comment2">
-                        <div class="comment2" data-document-id>
-                          <div class="root2">
-                            <v-btn
-                              class="comment-avatar"
-                              variant="text"
-                              icon="tommytrojan.png">
-                            </v-btn>
-                            <div>
-                              <div class="user-info">
-                                <span class="user-name">
-                                  mary686
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="comment-content">
-                            <p>Me neither. Stop being so dramatic.</p>
-                          </div>
-                          <div class="comment-action">
-                            <v-btn
-                              variant="text"
-                              prepend-icon="mdi-reply"
-                              @click="openReply"
-                            >
-                              Reply
-                            </v-btn>
-                          </div>
-                          <div id="sub-comment2" class="sub-comment" data-is-show="false">
-                            <div class="editor">
-                              <v-textarea auto-grow rows="2" counter="50">
-
-                              </v-textarea>
-                              <div class="action-area">
-                                <div class="blank-space">
-
-                                </div>
-                                <v-btn
-                                  variant="text"
-                                  @click="closeReply"
-                                  class="comment-close-button">
-                                  cancel
-                                </v-btn>
-                                <v-btn color="blue-grey" class="comment-post-button">
-                                  Post
-                                </v-btn>
-                              </div>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-                        <v-divider></v-divider>
-
                     </div>
                   </div>
                 </div>
@@ -448,7 +182,29 @@
 
 <script>
 export default {
+  data: () => ({
+    HeartisDisabled: false,
+    FavisDisabled: false,
+    LikeisDisabled: false,
+    image: require("@/assets/tommytrojan.png"),
+  }),
   methods: {
+    showComment () {
+      const page = document.querySelector("#comment2");
+      page.dataset.showComment1 = "true";
+    },
+    inc() {
+      const page = document.getElementById('count');
+      let num = page.innerHTML;
+      num ++;
+      page.innerHTML = num;
+    },
+    dec() {
+      const page = document.getElementById('count');
+      let num = page.innerHTML;
+      num --;
+      page.innerHTML = num;
+    },
     openReply() {
       const page = document.querySelector("#sub-comment");
       page.dataset.isShow = "true";
@@ -462,6 +218,9 @@ export default {
 </script>
 
 <style scoped>
+.comment2[data-show-comment1='false'] {
+  display: none;
+}
 .sub-comment[data-is-show='false'] {
   display: none;
 }
@@ -475,7 +234,6 @@ export default {
   margin-top: 5px;
 }
 .comment-avatar {
-  
   width: 30px;
   height: 30px;
   display: inline-block;
@@ -487,7 +245,6 @@ export default {
   background-position: center;
   border: solid 1px;
   border-color: black;
-  
 }
 .root2 {
   display: -webkit-box;
@@ -505,15 +262,6 @@ export default {
   padding-left: 40px;
   margin-top: 5px;
 }
-.reply-comment2{
-  padding-left: 80px;
-  margin-top: 5px;
-}
-.reply-comment3{
-  padding-left: 120px;
-  margin-top: 5px;
-}
-
 .editor .action-area .blank-space {
   -webkit-box-flex: 1;
   -ms-flex: 1;

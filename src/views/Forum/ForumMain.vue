@@ -15,6 +15,14 @@
                             <input type="checkbox" class="sort sort-css" checked>
                             Hottest
                           </label>
+                          <label class="normal-sort">
+                            <input type="checkbox" class="sort sort-css" checked>
+                            Latest to oldest
+                          </label>
+                          <label class="normal-sort">
+                            <input type="checkbox" class="sort sort-css" checked>
+                            Most views
+                          </label>
                         </div>
                       </div>
                       <v-btn class="mx-2" fab dark color="blue-grey" @click="newPost">
@@ -24,20 +32,20 @@
                       </v-btn>
                     </div>
                   </div>
-                  <div  class="topic-list-container2" >
-                    <div class="topic-list-content">
+
+                  <div class="topic-list-content">
                       <div>
                         <div class="topic-item-wrap">
                           <div class="topic-item">
                             <a href="" class="topic-info">
-                              <img class="avatar" :src="image">
+                              <div class="avatar"></div>
                             </a>
                             <div class="topic-title-wrapper">
                               <div class="item-header">
-                                <router-link to="/forum/topic2">
+                                <router-link to="/forum/topic4">
                                   <div class="title-container">
                                     <div class="title">
-                                      This is an amazing website.
+                                      Bathrooms are broken at Leavey... again
                                     </div>
                                   </div>
                                 </router-link>
@@ -45,33 +53,135 @@
                               <div class="topic-info">
                                 <span>
                                   <router-link to="">
-                                    Yaxi Zeng
+                                    booklover2002
                                   </router-link>
                                   <span>
-                                    created at: 11 28, 2022 18:41
+                                  Created at: 3:37pm on 11/27/2022
+                                    <p></p>
+                                  </span>
+                                  <span>
+                                    Last reply: 1:55pm on  11/30/2022
                                   </span>
                                 </span>
+                              </div>
+                            </div>
+                            <div class="wrapper">
+                              <div class="icon-wrapper">
+
+                                <div class="top">
+                                  -265
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div id="post2" class="topic-list-container" data-show="false">
+
                     <div class="topic-list-content">
                       <div>
                         <div class="topic-item-wrap">
                           <div class="topic-item">
                             <a href="" class="topic-info">
-                              <img class="avatar" :src="image">
+                              <div class="avatar"></div>
+                            </a>
+                            <div class="topic-title-wrapper">
+                              <div class="item-header">
+                                <router-link to="/forum/topic5">
+                                  <div class="title-container">
+                                    <div class="title">
+                                      To the blonde guy in the red shirt at Doheny earlier today...
+                                    </div>
+                                  </div>
+                                </router-link>
+                              </div>
+                              <div class="topic-info">
+                                <span>
+                                  <router-link to="">
+                                    studygirl10
+                                  </router-link>
+                                  <span>
+                                  Created at: 11:18pm on 11/6/2022
+                                    <p></p>
+                                  </span>
+                                  <span>
+                                    Last reply: 4:00pm on  11/27/2022
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="wrapper">
+                              <div class="icon-wrapper">
+
+                                <div class="top">
+                                  177
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="topic-list-content">
+                      <div>
+                        <div class="topic-item-wrap">
+                          <div class="topic-item">
+                            <a href="" class="topic-info">
+                              <div class="avatar"></div>
+                            </a>
+                            <div class="topic-title-wrapper">
+                              <div class="item-header">
+                                <router-link to="/forum/topic7">
+                                  <div class="title-container">
+                                    <div class="title">
+                                      This is an amazing website
+                                    </div>
+                                  </div>
+                                </router-link>
+                              </div>
+                              <div class="topic-info">
+                                <span>
+                                  <router-link to="">
+                                    yax11111
+                                  </router-link>
+                                  <span>
+                                  Created at: 12:04pm on 11/26/2022
+                                    <p></p>
+                                  </span>
+                                  <span>
+                                    Last reply: 9:05am on  11/27/2022
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="wrapper">
+                              <div class="icon-wrapper">
+
+                                <div class="top">
+                                  111
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  <div class="topic-list-content">
+                      <div>
+                        <div class="topic-item-wrap">
+                          <div class="topic-item">
+                            <a href="" class="topic-info">
+                              <div class="avatar"></div>
                             </a>
                             <div class="topic-title-wrapper">
                               <div class="item-header">
                                 <router-link to="/forum/topic1">
                                   <div class="title-container">
                                     <div class="title">
-                                      Hello CS 201!
+                                      Anyone working at SAL today? 
                                     </div>
                                   </div>
                                 </router-link>
@@ -79,19 +189,173 @@
                               <div class="topic-info">
                                 <span>
                                   <router-link to="">
-                                    Frank He
+                                    codemaster789
                                   </router-link>
                                   <span>
-                                    created at: 11 27, 2022 11:27
+                                  Created at: 10:26am on 12/1/2022
+                                    <p></p>
+                                  </span>
+                                  <span>
+                                    Last reply: 12:43pm on  12/1/2022
                                   </span>
                                 </span>
+                              </div>
+                            </div>
+                            <div class="wrapper">
+                              <div class="icon-wrapper">
+
+                                <div class="top">
+                                  31
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+
+                 
+                    <div class="topic-list-content">
+                      <div>
+                        <div class="topic-item-wrap">
+                          <div class="topic-item">
+                            <a href="" class="topic-info">
+                              <div class="avatar"></div>
+                            </a>
+                            <div class="topic-title-wrapper">
+                              <div class="item-header">
+                                <router-link to="/forum/topic2">
+                                  <div class="title-container">
+                                    <div class="title">
+                                      Why does Leavey smell so bad??? 
+                                    </div>
+                                  </div>
+                                </router-link>
+                              </div>
+                              <div class="topic-info">
+                                <span>
+                                  <router-link to="">
+                                    smellycoder35079
+                                  </router-link>
+                                  <span>
+                                  Created at: 11:03am on 11/29/2022
+                                    <p></p>
+                                  </span>
+                                  <span>
+                                    Last reply: 5:49pm on  11/30/2022
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="wrapper">
+                              <div class="icon-wrapper">
+
+                                <div class="top">
+                                  78
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="topic-list-content">
+                      <div>
+                        <div class="topic-item-wrap">
+                          <div class="topic-item">
+                            <a href="" class="topic-info">
+                              <div class="avatar"></div>
+                            </a>
+                            <div class="topic-title-wrapper">
+                              <div class="item-header">
+                                <router-link to="/forum/topic3">
+                                  <div class="title-container">
+                                    <div class="title">
+                                      Has Fertitta ever not been completely booked? 
+                                    </div>
+                                  </div>
+                                </router-link>
+                              </div>
+                              <div class="topic-info">
+                                <span>
+                                  <router-link to="">
+                                    themarsha11man
+                                  </router-link>
+                                  <span>
+                                  Created at: 8:37pm on 11/29/2022
+                                    <p></p>
+                                  </span>
+                                  <span>
+                                    Last reply: 2:23pm on  11/30/2022
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="wrapper">
+                              <div class="icon-wrapper">
+
+                                <div class="top">
+                                  22
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+
+
+                      </div>
+                    </div>
+
+                     <div class="topic-list-container">
+                    <div class="topic-list-content">
+                      <div>
+                        <div class="topic-item-wrap">
+                          <div class="topic-item">
+                            <a href="" class="topic-info">
+                              <div class="avatar"></div>
+                            </a>
+                            <div class="topic-title-wrapper">
+                              <div class="item-header">
+                                <router-link to="/forum/topic6">
+                                  <div class="title-container">
+                                    <div class="title">
+                                      Question about Fertitta study rooms
+                                    </div>
+                                  </div>
+                                </router-link>
+                              </div>
+                              <div class="topic-info">
+                                <span>
+                                  <router-link to="">
+                                    themarsha11man
+                                  </router-link>
+                                  <span>
+                                  Created at: 3:59pm on 11/25/2022
+                                    <p></p>
+                                  </span>
+                                  <span>
+                                    Last reply: 9:39am on  11/26/2022
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="wrapper">
+                              <div class="icon-wrapper">
+
+                                <div class="top">
+                                  6
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>                  
                 </div>
               </div>
             </div>
@@ -118,7 +382,7 @@
                      :disabled="loading3"
                      color="blue-grey"
                      class="post-button white--text"
-                     @click="showPost">
+                     @click="loader = 'loading3'">
                 Post
                 <v-icon class="send-icon">
                   mdi-send
@@ -126,15 +390,6 @@
               </v-btn>
             </div>
           </div>
-          <v-textarea
-            clearable
-            variant="outlined"
-            clear-icon="mdi-close-circle"
-            rows="12"
-            counter="250"
-            :rules="rules"
-          >
-          </v-textarea>
         </div>
       </div>
     </div>
@@ -144,8 +399,6 @@
 <script>
 export default {
   data: () => ({
-    image: require("@/assets/tommytrojan.png"),
-    rules : [v => v.length <= 250 || 'Max 250 characters!'],
     loader: null,
     loading3: false,
     closed: false,
@@ -159,11 +412,6 @@ export default {
     }
   }),
   methods: {
-    showPost() {
-      const page = document.querySelector("#post2");
-      page.dataset.show = "true";
-      this.closePost();
-    },
     newPost() {
       const page = document.querySelector("#post");
       page.dataset.appear = "true";
@@ -177,9 +425,6 @@ export default {
 </script>
 
 <style scoped>
-.topic-list-container[data-show='false'] {
-  display: none;
-}
 .send-icon {
   margin-left: 5px;
 }
@@ -545,7 +790,26 @@ input:not([type='range']), label, select, summary, textarea {
   border-radius: 50%;
   margin-left: 15px;
   margin-right: 20px;
+  background-image: url("tommytrojan.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+		background-position: center;
 }
+.profilePhoto
+    {
+      float: left;
+      margin-top: 15px;
+      margin-left: 10px;
+      width: 110px;
+      height: 110px;
+      border-radius: 100%;
+      background-image: url("tommytrojan.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border: solid 2px;
+      border-color: black;
+    }
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -600,11 +864,38 @@ input:not([type='range']), label, select, summary, textarea {
 .search-wrapper1 .search-input {
   width: 100%;
 }
-
+.search-wrapper2 {
+  display: inline-block;
+  position: relative;
+}
 .search-wrapper1 .search-box1 input {
   padding-right: 32px;
 }
-
+.search-box2 .input {
+  padding: 6.3px 10px;
+  font-size: 12;
+}
+.input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #546e7a;
+  border: 1px solid #cfd8dc;
+  border-radius: 3px;
+  font-weight: 300;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -webkit-transition: 0.4s all;
+  -o-transition: 0.4s all;
+  transition: 0.4s all;
+}
+.input:focus {
+  color: #263238;
+  border-color: #263238;
+  outline: none !important;
+  -webkit-box-shadow: 0 0 0 2px rgb(251 192 46 / 40%);
+  box-shadow: 0 0 0 2px rgb(251 192 46 / 40%);
+}
 button, input {
   overflow: visible;
 }

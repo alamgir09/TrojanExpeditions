@@ -23,9 +23,13 @@ import RegisterPage from "@/views/RegisterPage.vue";
 
 // import AddLocationButton from "@/views/Locations/AddLocationButton";
 // import AddReviewButton from "@/views/Review/AddReviewButton";
-import TopicPage from "@/views/Forum/TopicPage";
+import TopicPage1 from "@/views/Forum/TopicPage1";
 import TopicPage2 from "@/views/Forum/TopicPage2";
-
+import TopicPage3 from "@/views/Forum/TopicPage3";
+import TopicPage4 from "@/views/Forum/TopicPage4";
+import TopicPage5 from "@/views/Forum/TopicPage5";
+import TopicPage6 from "@/views/Forum/TopicPage6";
+import TopicPage7 from "@/views/Forum/TopicPage7";
 const vuetify = createVuetify({
     icons: {
         iconfont: 'mdiSvg', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
@@ -173,16 +177,43 @@ const router = createRouter({
       component: RegisterPage,
       props: true,
     },
-    {
+      
+      {
       path: '/forum/topic1',
       name: 'topic1',
-      component: TopicPage
-    },
-    {
+      component: TopicPage1
+      },
+      {
       path: '/forum/topic2',
       name: 'topic2',
       component: TopicPage2
-    },
+      },
+      {
+      path: '/forum/topic3',
+      name: 'topic3',
+      component: TopicPage3
+      },
+      {
+      path: '/forum/topic4',
+      name: 'topic4',
+      component: TopicPage4
+      },
+      {
+      path: '/forum/topic5',
+      name: 'topic5',
+      component: TopicPage5
+      },
+      {
+      path: '/forum/topic6',
+      name: 'topic6',
+      component: TopicPage6
+      },
+      {
+      path: '/forum/topic7',
+      name: 'topic7',
+      component: TopicPage7
+      },
+    
   ],
 });
 
