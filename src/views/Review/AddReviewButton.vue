@@ -178,22 +178,35 @@
     <div v-if="formSubmitted">
       <div class="review">
         <div class="profilePhoto">
-          <h4> {{ name }}</h4>
+          {{ name }}
         </div>
         <div class="reviewMessage">
           {{ comments }}
         </div>
-        &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  Quietness &ensp;
+        &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; Quietness &ensp;
         &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         &ensp; Cleanliness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-        &ensp; &ensp; &ensp; &ensp; &ensp; Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+        &ensp; &ensp; &ensp; &ensp; &ensp; Overall &ensp; &ensp; &ensp; &ensp;
+        &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         <div class="stars">
-          &ensp; &ensp; &ensp; &ensp; &ensp; &nbsp; &nbsp; &nbsp; &nbsp;
-          <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+          &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
           &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
-          <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
-          &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-          <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
         </div>
       </div>
     </div>
@@ -259,50 +272,33 @@ export default {
   text-align: left;
 }
 .reviewMessage {
-  padding-top: 10px;
-  padding-bottom: 15px;
-  margin-left: 70px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  padding-left: 40;
+  padding-right: 40;
   font-weight: normal;
-  position:relative;left:80px;
-  background-color: white;
-  width: 80%;
-  height:35%;
-  border-radius: 3%;
-  border: solid 2px black;
 }
 .review {
-  font-size:20px;
-  color:black;
+  font-size: 20px;
+  color: black;
   font-weight: bold;
   height: 170px;
+  text-align: center;
   box-sizing: border-box;
-  margin:25px;
-  margin-bottom:0px;
+  margin: 25px;
   margin-left: 75px;
   margin-right: 75px;
   background-color: lightgray;
-  padding-top: 30px;
 }
-.profilePhoto
-{
+.profilePhoto {
   float: left;
+  margin-top: 15px;
   margin-left: 10px;
   width: 110px;
   height: 110px;
   border-radius: 100%;
-  background-image: url("tommytrojan.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border: solid 2px;
-  border-color: black;
-  text-align: center;
-  position:relative;bottom:15px;
-  position:relative;left:10px;
-}
-
-.profilePhoto h4{
-  position:relative;top:110px;
+  background-color: white;
+  background-image: something;
 }
 
 .stars {

@@ -3,6 +3,7 @@
     <button type="button" class="submit add-button" @click="showModal">
       Add Location +
     </button>
+    {{ review }}
 
     <div class="modal-backdrop" v-if="isModalVisible">
       <div class="modal">
@@ -14,7 +15,7 @@
         <section class="modal-body center">
           <form
             @submit.prevent="submitForm"
-            v-if="!formSubmitted"
+            v-if="isModalVisible"
             class="form1"
           >
             <div class="inputs">
@@ -84,7 +85,7 @@
         </footer>
       </div>
     </div>
-    <div v-if="formSubmitted">
+    <div v-if="reviewAdded">
       <div class="responsive">
         <div class="gallery">
           <div class="thumbnail">
@@ -92,7 +93,7 @@
               <img :src="image" style="height: object-fit" />
             </router-link>
           </div>
-          <div class="desc">{{ name }}</div>
+          <div class="desc">Tutor Hall Cafe</div>
         </div>
       </div>
     </div>
@@ -115,6 +116,7 @@ export default {
       openModal: true,
       loggedIn: localStorage.loggedIn,
       image: require("@/assets/tommytrojan.png"),
+      reviewAdded: localStorage.getItem("reviewAdded"),
     };
   },
   methods: {
@@ -133,12 +135,15 @@ export default {
         this.description = "";
         this.reservation = "";
         this.groupwork = "";
+        localStorage.setItem("reviewAdded", "true");
       }
     },
     closeModal() {
       this.isModalVisible = false;
     },
     submitForm() {
+      this.reviewAdded = localStorage.getItem("reviewAdded");
+      console.log(this.reviewAdded);
       this.isModalVisible = false;
       this.formSubmitted = true;
       this.$emit("formSubmitted");
