@@ -1,15 +1,17 @@
 <template>
   <div id="mainPage">
     <main>
-      <div class="search-box">
-        <input
-          name=""
-          id=""
-          type="text"
-          class="search-bar"
-          placeholder="Your favorite library"
-        />
-      </div>
+      <form id="searchButton" :action="'/'+searchTerm+'/reviews'">
+        <div class="search-box">
+          <input
+            id=""
+            type="text"
+            class="search-bar"
+            placeholder="Your favorite library..."
+            v-model="searchTerm"
+          />
+        </div>
+      </form>
     </main>
   </div>
 </template>
@@ -19,9 +21,11 @@ export default {
   data() {
     return {
       loggedIn: localStorage.loggedIn,
+      searchTerm: "",
     };
   },
 };
+
 </script>
 
 <style scoped>
