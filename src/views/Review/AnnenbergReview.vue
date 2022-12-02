@@ -10,36 +10,34 @@
             <div class="desc"> 3630 Watt Way, Los Angeles, CA 90089</div>
         </div>
     <div class="summary">
-        <h3>SUMMARY</h3>
+        <h3>Summary</h3>
         <div class="summary_inner">
-        <ul>
-            Rating: 5 stars overall {{datastructure}}
             <br>
-            Quiteness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span><span class="fa fa-star"></span>
+            Quiteness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
             <br>
-            Cleanliness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span><span class="fa fa-star"></span>
+            Cleanliness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span>
             <br>
-            Overall: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span><span class="fa fa-star"></span>
+            Overall: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
             <br>
-        </ul>
     </div>
     </div>
     <div class="recent">
-        <h3>Latest Review</h3>
+        <h3>Top Liked Review</h3>
         <div class="recent_inner">
             Mary:  Annenberg is nice but it’s always so loud! I need quiet!
             <br>
-            Quietness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span><span class="fa fa-star"></span>   
-            &emsp;Cleanliness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+            Quietness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>   
+            Cleanliness: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
             <br>
-            Overall: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span><span class="fa fa-star "></span>
+            Overall: {{datastructure}}<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
             <br>
         </div>
     </div>
+    <AddReviewButton/>
     
     <div class="review">
         <div class="profilePhoto">
-            Clark
+            <h4>Clark</h4>
         </div> 
         <div class="reviewMessage">
             Annenberg is the best! Everyone is so friendly I am always in a good mood here.  {{something}}
@@ -49,18 +47,18 @@
         Cleanliness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         <div class="stars">
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
             <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span>
         </div>
     </div>
     
     <div class="review">
         <div class="profilePhoto">
-            Yaxi
+            <h4>Yaxi</h4>
         </div> 
         <div class="reviewMessage">
             Just visited Annenberg for the first time. Felt more like a dining hall than a library.. {{something}}
@@ -70,39 +68,39 @@
         Cleanliness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         <div class="stars">
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star "></span>
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star "></span>
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
         </div>
     </div>
     
     <div class="review">
         <div class="profilePhoto">
-            Frank
+            <h4>Frank</h4>
         </div> 
         <div class="reviewMessage">
-            Don’t come here much it’s too loud.   {{something}}
+            Don't come here much it's too loud.   {{something}}
         </div>
         &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Quietness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Cleanliness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         <div class="stars">
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span>
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
         </div>
     </div>
     
     <div class="review">
         <div class="profilePhoto">
-            Clara
+            <h4>Clara</h4>
         </div> 
         <div class="reviewMessage">
             Just went to Annenberg for the first time and I loved it! Will definitely be coming back.  {{something}}
@@ -112,39 +110,39 @@
         Cleanliness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         <div class="stars">
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
+            &ensp; &ensp; &ensp; &ensp; &ensp; &nbsp; &nbsp; &nbsp; &nbsp;
             <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
             <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
             <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
         </div>
     </div>
     
     <div class="review">
         <div class="profilePhoto">
-            Mohammed
+            <h4>Mohammed</h4>
         </div> 
         <div class="reviewMessage">
-            My girlfriend loves this place but it’s too crowded for me. {{something}}
+            My girlfriend loves this place but it's too crowded for me. {{something}}
         </div>
         &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Quietness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Cleanliness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         <div class="stars">
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span>
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
         </div>
     </div>
     
     <div class="review">
         <div class="profilePhoto">
-            Matt
+            <h4>Matt</h4>
         </div> 
         <div class="reviewMessage">
             Why anybody goes to Annenberg is beyond me, this place sucks.   {{something}}
@@ -154,12 +152,12 @@
         Cleanliness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         <div class="stars">
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
             &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span> <span class="fa fa-star"></span>
-            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-            <span class="fa fa-star checked"></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span> <span class="fa fa-star "></span> <span class="fa fa-star"></span>
+            <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span> <span class="fa fa-star unchecked"></span>
         </div>
     </div>
     
@@ -179,6 +177,13 @@
         // {
             // for loop iterating and changing star values
         // }
+
+        import AddReviewButton from "./AddReviewButton.vue";
+        export default {
+        props: ["loggedIn"],
+        components: {
+            AddReviewButton
+        }}
     </script>
     <!-- This is the css code below-->
     <style scoped>
@@ -201,7 +206,12 @@
     {
         color:orange;
     }
-    
+
+    .unchecked
+    {
+        color: white;
+    }
+
     h1{
         margin-top: 10px;
     }
@@ -244,11 +254,12 @@
         float:left;
         border-radius: 5%;
         background-color: lightgray;
+        padding-top:20px;
     }
     
     .summary_inner
     {
-        margin-left: 10px;
+        margin-left: 23%;
     }
     
     .recent
@@ -263,11 +274,13 @@
         margin-bottom: 50px;
         border-radius: 5%;
         background-color: lightgray;
+        padding-top:20px;
     }
     
     .recent_inner
     {
-        margin-left: 10px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .review
     {
@@ -275,48 +288,50 @@
         color:black;
         font-weight: bold;
         height: 170px;
-        text-align: center;
         box-sizing: border-box;
         margin:25px;
         margin-left: 75px;
         margin-right: 75px;
         background-color: lightgray;
-    }
-    .big_review
-    {
-        font-size:20px;
-        color:black;
-        font-weight: bold;
-        height: 200px;
-        text-align: center;
-        box-sizing: border-box;
-        margin:25px;
-        margin-left: 75px;
-        margin-right: 75px;
-        background-color: lightgray;
+        padding-top: 30px;
     }
     
     .reviewMessage
     {
-        padding-top: 15px;
-        padding-bottom: 40px;
-        padding-left: 40;
-        padding-right: 40;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        margin-left: 70px;
         font-weight: normal;
+        position:relative;left:80px;
+        background-color: white;
+        width: 80%;
+        height:35%;
+        border-radius: 3%;
+        border: solid 2px black;
     }
     
     .profilePhoto
     {
         float: left;
-        margin-top: 15px;
         margin-left: 10px;
         width: 110px;
         height: 110px;
         border-radius: 100%;
-        background-color: white;
-        background-image: something;
-
+        background-image: url("tommytrojan.png");
+        background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+        border: solid 2px;
+        border-color: black;
+        text-align: center;
+        position:relative;bottom:15px;
+        position:relative;left:10px;
     }
+    
+    .profilePhoto h4{
+        position:relative;top:110px;
+    }
+ 
     
     .stars
     {

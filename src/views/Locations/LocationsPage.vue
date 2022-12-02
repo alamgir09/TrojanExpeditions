@@ -1,4 +1,5 @@
 <template>
+<AddLocationButton/>
     <div class="responsive">
   <div class="gallery">
     <div class="thumbnail">
@@ -83,13 +84,30 @@
 </template>
 
 <script>
+import AddLocationButton from "./AddLocationButton.vue";
+// import PageHeaderLogoDropdownVue from "./components/PageHeaderLogoDropdown.vue";
+export default {
+  props: ["loggedIn"],
+  components: {
+    AddLocationButton
+  },
+};
 
 </script>
 
 
 <style scoped>
+.div-button {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  padding-right: 20px;
+}
+
 div.gallery {
   border: 1px solid #ccc;
+  
 }
 /*must use 900 600 image*/
 .thumbnail{
@@ -105,6 +123,7 @@ div.gallery:hover {
 div.gallery img {
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 div.desc {

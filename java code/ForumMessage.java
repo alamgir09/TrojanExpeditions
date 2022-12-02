@@ -22,6 +22,11 @@ public class ForumMessage {
 		this.setLocationID(locationID);
 	}
 	
+	@Override
+	public String toString() {
+		return "Message ID: " + messageID + " Message Content: " + message_content + " Sender ID: " + senderID;
+	}
+	
 	public long getMessageID() {
 		return messageID;
 	}
