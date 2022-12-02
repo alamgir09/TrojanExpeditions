@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <button type="button" class="submit" @click="showModal">
+    <button type="button" class="submit add-button" @click="showModal">
       Add Review +
     </button>
 
@@ -42,16 +42,74 @@
             </div>
             <div class="inputs">
               <span>Quiet Level:</span>
-              <div style="display: flex; align-items: center">
+              <div style="display: flex; flex-direction: column">
                 <label>{{ quiet }}</label>
-                <input type="range" v-model="quiet" style="width: 200px" />
+                <input
+                  type="range"
+                  v-model="quiet"
+                  style="width: 200px"
+                  min="0"
+                  max="5"
+                  step="1"
+                />
+                <div class="center" style="width: 200px; height: 25px">
+                  <font-awesome-icon
+                    v-if="quiet >= '1'"
+                    icon="fa-solid fa-star"
+                  />
+                  <font-awesome-icon
+                    v-if="quiet >= '2'"
+                    icon="fa-solid fa-star"
+                  />
+                  <font-awesome-icon
+                    v-if="quiet >= '3'"
+                    icon="fa-solid fa-star"
+                  />
+                  <font-awesome-icon
+                    v-if="quiet >= '4'"
+                    icon="fa-solid fa-star"
+                  />
+                  <font-awesome-icon
+                    v-if="quiet >= '5'"
+                    icon="fa-solid fa-star"
+                  />
+                </div>
               </div>
             </div>
             <div class="inputs">
               <span>Cleanliness Level:</span>
-              <div style="display: flex; align-items: center">
+              <div style="display: flex; flex-direction: column">
                 <label>{{ clean }}</label>
-                <input type="range" v-model="clean" style="width: 200px" />
+                <input
+                  type="range"
+                  v-model="clean"
+                  style="width: 200px"
+                  min="0"
+                  max="5"
+                  step="1"
+                />
+                <div class="center" style="width: 200px; height: 25px">
+                  <font-awesome-icon
+                    v-if="clean >= '1'"
+                    icon="fa-solid fa-star"
+                  />
+                  <font-awesome-icon
+                    v-if="clean >= '2'"
+                    icon="fa-solid fa-star"
+                  />
+                  <font-awesome-icon
+                    v-if="clean >= '3'"
+                    icon="fa-solid fa-star"
+                  />
+                  <font-awesome-icon
+                    v-if="clean >= '4'"
+                    icon="fa-solid fa-star"
+                  />
+                  <font-awesome-icon
+                    v-if="clean >= '5'"
+                    icon="fa-solid fa-star"
+                  />
+                </div>
               </div>
             </div>
             <div class="inputs">
@@ -118,13 +176,26 @@
       </div>
     </div>
     <div v-if="formSubmitted">
-      <h3>Your Location Submission Details:</h3>
-      <p>Your Display Name: {{ name }}</p>
-      <p>Review Comments: {{ comments }}</p>
-      <p>Quietness Level: {{ quiet }}</p>
-      <p>Groupwork: {{ groupwork }}</p>
-      <p>Cleanliness Level: {{ clean }}</p>
-      <p>Overall Rating: {{ rating }}</p>
+      <div class="review">
+        <div class="profilePhoto">
+            {{name}}
+        </div> 
+        <div class="reviewMessage">
+            {{comments}}
+        </div>
+        &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+        Quietness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+        Cleanliness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+        Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+        <div class="stars">
+            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+        </div>
+    </div>
     </div>
   </div>
 </template>
@@ -181,6 +252,58 @@ export default {
 </script>
 
 <style scoped>
+.checked
+    {
+        color:orange;
+    }
+.stars
+    {
+        text-align: left;
+    }
+.reviewMessage
+    {
+        padding-top: 15px;
+        padding-bottom: 40px;
+        padding-left: 40;
+        padding-right: 40;
+        font-weight: normal;
+    }
+.review
+    {
+        font-size:20px;
+        color:black;
+        font-weight: bold;
+        height: 170px;
+        text-align: center;
+        box-sizing: border-box;
+        margin:25px;
+        margin-left: 75px;
+        margin-right: 75px;
+        background-color: lightgray;
+    }
+    .profilePhoto
+    {
+        float: left;
+        margin-top: 15px;
+        margin-left: 10px;
+        width: 110px;
+        height: 110px;
+        border-radius: 100%;
+        background-color: white;
+        background-image: something;
+
+    }
+    
+    .stars
+    {
+        text-align: left;
+    }
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  padding-left: 5px;
+}
 .form1 {
   width: 100%;
 }
@@ -221,16 +344,16 @@ export default {
   display: flex;
   flex-direction: column;
   width: 500px;
-  height: 400px;
+  height: 497px;
 }
 
 .modal-footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   border-top: 1px solid #eeeeee;
   background-color: #f6aa1c;
+  padding: 5px;
 }
 
 .modal-header {
@@ -268,5 +391,11 @@ export default {
   background-color: #621708;
   border-radius: 4px;
   border: none;
+}
+
+.add-button {
+  margin-left: 75px;
+  color: white;
+  background-color: #8e7f7f;
 }
 </style>

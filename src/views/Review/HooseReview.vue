@@ -25,7 +25,7 @@
     </div>
     </div>
     <div class="recent">
-        <h3>Latest Review</h3>
+        <h3>Top Liked Review</h3>
         <div class="recent_inner">
             Mary: My favorite spot on campus to get work done! Always clean and never too busy. 
             <br>
@@ -36,6 +36,8 @@
             <br>
         </div>
     </div>
+
+    <AddReviewButton/>
     
     <div class="big_review">
         <div class="profilePhoto">
@@ -170,18 +172,13 @@
     </template>
     <!-- This is the js code below-->
     <script>
-        // here we want to aggregate review rankings
-        // also possibly create a sort function that sorts reviews by date posted
-        // I'm assuming the data is stored in a structure called datastructure
-        // function lastReview()
-        // {
-        //     return datastructure[-1]??
-        // }
-    
-        // function starRating()
-        // {
-            // for loop iterating and changing star values
-        // }
+        import AddReviewButton from "./AddReviewButton.vue";
+        export default {
+        props: ["loggedIn"],
+        components: {
+            AddReviewButton
+        }}
+        
     </script>
     <!-- This is the css code below-->
     <style scoped>

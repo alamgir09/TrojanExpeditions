@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button type="button" class="submit" @click="showModal">
+    <button type="button" class="submit add-button" @click="showModal">
       Add Location +
     </button>
 
@@ -48,11 +48,11 @@
             <div class="inputs">
               <span>Reservation Required:</span>
 
-              <div>
+              <div class="radios">
                 <input type="radio" v-model="reservation" value="Yes" />
                 <label>Yes</label>
               </div>
-              <div>
+              <div class="radios">
                 <input type="radio" v-model="reservation" value="No" />
                 <label>No</label>
               </div>
@@ -60,11 +60,11 @@
             <div class="inputs">
               <span>Good For Group Work:</span>
 
-              <div>
+              <div class="radios">
                 <input type="radio" v-model="groupwork" value="Yes" />
                 <label>Yes</label>
               </div>
-              <div>
+              <div class="radios">
                 <input type="radio" v-model="groupwork" value="No" />
                 <label>No</label>
               </div>
@@ -85,18 +85,21 @@
       </div>
     </div>
     <div v-if="formSubmitted">
-      <h3>Your Location Submission Details:</h3>
-      <p>Location Name: {{ name }}</p>
-      <p>Location Directions: {{ directions }}</p>
-      <p>Description: {{ description }}</p>
-      <p>Reservation Required: {{ reservation }}</p>
-      <p>Groupwork: {{ groupwork }}</p>
+      <div class="responsive">
+    <div class="gallery">
+      <div class="thumbnail">
+      <router-link to="/hoose/reviews">
+        <img :src="image" style="height: object-fit;"/>
+      </router-link>
+    </div>
+    <div class="desc">{{name}}</div>
+  </div>
+</div>
     </div>
   </div>
 </template>
 
 <script>
-// import PopUp from "./PopUp.vue";
 
 export default {
   name: "App",
@@ -112,6 +115,7 @@ export default {
       groupwork: "",
       openModal: true,
       loggedIn: localStorage.loggedIn,
+      image: require("@/assets/tommytrojan.png"),
     };
   },
   methods: {
@@ -145,6 +149,45 @@ export default {
 </script>
 
 <style scoped>
+div.gallery {
+  border: 1px solid #ccc;
+}
+/*must use 900 600 image*/
+.thumbnail{
+  width: 600 px;
+  height: 400 px;
+  overflow: hidden;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.responsive {
+  padding: 20px 20px;
+  float: left;
+  width: 24.99999%;
+}
+.radios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 5px;
+}
 .form1 {
   width: 100%;
 }
@@ -184,7 +227,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 500px;
-  height: 450px;
+  height: 300px;
 }
 
 .modal-footer {
@@ -227,9 +270,14 @@ export default {
 .submit {
   width: 125px;
   height: 25px;
-  color: #f6aa1c;
-  background-color: #621708;
+  color: white;
+  background-color: #8e7f7f;
   border-radius: 4px;
   border: none;
+}
+
+.add-button {
+  margin-top: 20px;
+  margin-left: 20px
 }
 </style>
