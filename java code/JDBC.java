@@ -458,9 +458,9 @@ public class JDBC {
 		System.out.println(j.checkUser("jacob", "jacobobob"));
 		System.out.println(j.checkUsername("frank"));
 		System.out.println(j.checkUsername("jacob"));
-		j.insertRating(5, 5, 1, "goodgood", 0, 0);
-		j.insertForumMessage(5, 1, "Such a good place to study!");
+		j.insertRating(5, j.getUserID("frank"), j.getLocationID("leavey"), "goodgood", 0, 0);
+		j.insertForumMessage(j.getUserID("frank"), j.getLocationID("leavey"), "Such a good place to study!");
 		System.out.println(j.getAllForumMessages());
-		
+		sc.close();
 	}
 }
