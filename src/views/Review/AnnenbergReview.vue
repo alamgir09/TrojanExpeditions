@@ -22,7 +22,7 @@
     </div>
     </div>
     <div class="recent">
-        <h3>Latest Review</h3>
+        <h3>Top Liked Review</h3>
         <div class="recent_inner">
             Mary:  Annenberg is nice but it’s always so loud! I need quiet!
             <br>
@@ -33,6 +33,7 @@
             <br>
         </div>
     </div>
+    <AddReviewButton/>
     
     <div class="review">
         <div class="profilePhoto">
@@ -176,6 +177,13 @@
         // {
             // for loop iterating and changing star values
         // }
+
+        import AddReviewButton from "./AddReviewButton.vue";
+        export default {
+        props: ["loggedIn"],
+        components: {
+            AddReviewButton
+        }}
     </script>
     <!-- This is the css code below-->
     <style scoped>
