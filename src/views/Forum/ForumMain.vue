@@ -51,6 +51,93 @@
                     </div>
                   </div>
 
+                  <div
+                    id="post2"
+                    class="topic-list-container"
+                    data-show="false"
+                  >
+                    <div class="topic-list-content">
+                      <div>
+                        <div class="topic-item-wrap">
+                          <div class="topic-item">
+                            <a href="" class="topic-info">
+                              <div class="avatar"></div>
+                            </a>
+                            <div class="topic-title-wrapper">
+                              <div class="item-header">
+                                <router-link to="/forum/topic7">
+                                  <div class="title-container">
+                                    <div class="title">
+                                      This is an amazing website
+                                    </div>
+                                  </div>
+                                </router-link>
+                              </div>
+                              <div class="topic-info">
+                                <span>
+                                  <router-link to=""> marywang </router-link>
+                                  <span>
+                                    Created at: 12:04pm on 11/26/2022
+                                    <p></p>
+                                  </span>
+                                  <span>
+                                    Last reply: 9:05am on 11/27/2022
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="wrapper">
+                              <div class="icon-wrapper">
+                                <div class="top">1</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="post2" class="topic-list-container">
+                    <div class="topic-list-content">
+                      <div>
+                        <div class="topic-item-wrap">
+                          <div class="topic-item">
+                            <a href="" class="topic-info">
+                              <div class="avatar"></div>
+                            </a>
+                            <div class="topic-title-wrapper">
+                              <div class="item-header">
+                                <router-link to="/forum/topic7">
+                                  <div class="title-container">
+                                    <div class="title">
+                                      Closure at leavey today
+                                    </div>
+                                  </div>
+                                </router-link>
+                              </div>
+                              <div class="topic-info">
+                                <span>
+                                  <router-link to=""> yax11111 </router-link>
+                                  <span>
+                                    Created at: 12:04pm on 11/26/2022
+                                    <p></p>
+                                  </span>
+                                  <span>
+                                    Last reply: 9:05am on 11/27/2022
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="wrapper">
+                              <div class="icon-wrapper">
+                                <div class="top">1</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="topic-list-content">
                     <div>
                       <div class="topic-item-wrap">
@@ -121,44 +208,6 @@
                           <div class="wrapper">
                             <div class="icon-wrapper">
                               <div class="top">177</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="topic-list-content">
-                    <div>
-                      <div class="topic-item-wrap">
-                        <div class="topic-item">
-                          <a href="" class="topic-info">
-                            <div class="avatar"></div>
-                          </a>
-                          <div class="topic-title-wrapper">
-                            <div class="item-header">
-                              <router-link to="/forum/topic7">
-                                <div class="title-container">
-                                  <div class="title">
-                                    This is an amazing website
-                                  </div>
-                                </div>
-                              </router-link>
-                            </div>
-                            <div class="topic-info">
-                              <span>
-                                <router-link to=""> yax11111 </router-link>
-                                <span>
-                                  Created at: 12:04pm on 11/26/2022
-                                  <p></p>
-                                </span>
-                                <span> Last reply: 9:05am on 11/27/2022 </span>
-                              </span>
-                            </div>
-                          </div>
-                          <div class="wrapper">
-                            <div class="icon-wrapper">
-                              <div class="top">111</div>
                             </div>
                           </div>
                         </div>
@@ -365,7 +414,7 @@
                 :disabled="loading3"
                 color="blue-grey"
                 class="post-button white--text"
-                @click="loader = 'loading3'"
+                @click="showPost"
               >
                 Post
                 <v-icon class="send-icon"> mdi-send </v-icon>
@@ -373,6 +422,15 @@
             </div>
           </div>
         </div>
+        <v-textarea
+          clearable
+          variant="outlined"
+          clear-icon="mdi-close-circle"
+          rows="12"
+          counter="250"
+          :rules="rules"
+        >
+        </v-textarea>
       </div>
     </div>
   </div>
@@ -381,6 +439,8 @@
 <script>
 export default {
   data: () => ({
+    image: require("@/assets/tommytrojan.png"),
+    rules: [(v) => v.length <= 250 || "Max 250 characters!"],
     loader: null,
     loading3: false,
     closed: false,
@@ -394,13 +454,14 @@ export default {
     },
   },
   methods: {
+    showPost() {
+      const page = document.querySelector("#post2");
+      page.dataset.show = "true";
+      this.closePost();
+    },
     newPost() {
-      if (localStorage.getItem("loggedIn") == "true") {
-        const page = document.querySelector("#post");
-        page.dataset.appear = "true";
-      } else {
-        alert("You must be logged in to add a post!");
-      }
+      const page = document.querySelector("#post");
+      page.dataset.appear = "true";
     },
     closePost() {
       const page = document.querySelector("#post");
@@ -411,6 +472,9 @@ export default {
 </script>
 
 <style scoped>
+.topic-list-container[data-show="false"] {
+  display: none;
+}
 .send-icon {
   margin-left: 5px;
 }
