@@ -194,6 +194,7 @@ export default {
       if (this.loggedIn == "true") {
         this.text2 = this.text;
         localStorage.setItem("comment", this.text2);
+        this.comment = localStorage.getItem("comment");
         this.text = "";
         const page = document.querySelector("#comment2");
         localStorage.setItem("show", true);

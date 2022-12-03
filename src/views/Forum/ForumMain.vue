@@ -67,9 +67,7 @@
                               <div class="item-header">
                                 <router-link to="/forum/topic7">
                                   <div class="title-container">
-                                    <div class="title">
-                                      This is an amazing website
-                                    </div>
+                                    <div class="title">This is so cool</div>
                                   </div>
                                 </router-link>
                               </div>
@@ -109,7 +107,7 @@
                                 <router-link to="/forum/topic7">
                                   <div class="title-container">
                                     <div class="title">
-                                      Closure at leavey today
+                                      This is an amazing website.
                                     </div>
                                   </div>
                                 </router-link>
