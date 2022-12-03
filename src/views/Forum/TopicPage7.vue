@@ -116,7 +116,7 @@
                         id="comment2"
                         class="comment2"
                         data-document-id
-                        data-show-comment1="false"
+                        v-if="show"
                       >
                         <div class="root2">
                           <v-btn
@@ -132,7 +132,7 @@
                           </div>
                         </div>
                         <div class="comment-content">
-                          <p>{{ text }}</p>
+                          <p>{{ comment }}</p>
                         </div>
                         <div class="comment-action">
                           <v-btn variant="text"> </v-btn>
@@ -184,11 +184,24 @@ export default {
     LikeisDisabled: false,
     image: require("@/assets/tommytrojan.png"),
     text: "",
+    text2: "",
+    loggedIn: localStorage.getItem("loggedIn"),
+    show: localStorage.getItem("show"),
+    comment: localStorage.getItem("comment"),
   }),
   methods: {
     showComment() {
-      const page = document.querySelector("#comment2");
-      page.dataset.showComment1 = "true";
+      if (this.loggedIn == "true") {
+        this.text2 = this.text;
+        localStorage.setItem("comment", this.text2);
+        this.text = "";
+        const page = document.querySelector("#comment2");
+        localStorage.setItem("show", true);
+        this.show = localStorage.getItem("show");
+        page.dataset.showComment1 = "true";
+      } else {
+        alert("You must be logged in to reply.");
+      }
     },
     inc() {
       const page = document.getElementById("count");

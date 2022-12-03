@@ -444,6 +444,7 @@ export default {
     loader: null,
     loading3: false,
     closed: false,
+    loggedIn: localStorage.getItem("loggedIn"),
   }),
   watch: {
     loader() {
@@ -455,9 +456,13 @@ export default {
   },
   methods: {
     showPost() {
-      const page = document.querySelector("#post2");
-      page.dataset.show = "true";
-      this.closePost();
+      if (this.loggedIn == "true") {
+        const page = document.querySelector("#post2");
+        page.dataset.show = "true";
+        this.closePost();
+      } else {
+        alert("You must be logged in to post.");
+      }
     },
     newPost() {
       const page = document.querySelector("#post");
