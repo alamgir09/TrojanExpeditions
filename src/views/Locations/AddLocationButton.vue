@@ -114,20 +114,15 @@ export default {
       reservation: "",
       groupwork: "",
       openModal: true,
-      loggedIn: localStorage.loggedIn,
+      loggedIn: localStorage.getItem("loggedIn"),
       image: require("@/assets/tommytrojan.png"),
       reviewAdded: localStorage.getItem("reviewAdded"),
     };
   },
   methods: {
     showModal(e) {
-      this.loggedIn = localStorage.loggedIn;
-      if (this.loggedIn == "false") {
-        alert(
-          "You must be a registered user to add a new location. Please login or register."
-        );
-        e.preventDefault();
-      } else {
+      this.loggedIn = localStorage.getItem("loggedIn");
+      if (this.loggedIn == "true") {
         this.isModalVisible = true;
         this.formSubmitted = false;
         this.name = "";
@@ -136,6 +131,11 @@ export default {
         this.reservation = "";
         this.groupwork = "";
         localStorage.setItem("reviewAdded", "true");
+        e.preventDefault();
+      } else {
+        alert(
+          "You must be a registered user to add a new location. Please login or register."
+        );
       }
     },
     closeModal() {

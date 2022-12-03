@@ -178,22 +178,36 @@
     <div v-if="formSubmitted">
       <div class="review">
         <div class="profilePhoto">
-          <h4> {{ name }}</h4>
+          <h4>{{ name }}</h4>
         </div>
         <div class="reviewMessage">
           {{ comments }}
         </div>
-        &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  Quietness &ensp;
+        &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; Quietness &ensp;
         &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         &ensp; Cleanliness &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-        &ensp; &ensp; &ensp; &ensp; &ensp; Overall &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+        &ensp; &ensp; &ensp; &ensp; &ensp; Overall &ensp; &ensp; &ensp; &ensp;
+        &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
         <div class="stars">
           &ensp; &ensp; &ensp; &ensp; &ensp; &nbsp; &nbsp; &nbsp; &nbsp;
-          <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
           &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &emsp; &emsp; &emsp;
-          <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
-          &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
-          <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+          &ensp;
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
         </div>
       </div>
     </div>
@@ -214,18 +228,14 @@ export default {
       clean: "0",
       rating: "0",
       openModal: true,
-      loggedIn: localStorage.loggedIn,
+      loggedIn: localStorage.getItem("loggedIn"),
     };
   },
   methods: {
     showModal(e) {
-      this.loggedIn = localStorage.loggedIn;
-      if (this.loggedIn == "false") {
-        alert(
-          "You must be a registered user to add a new review. Please login or register."
-        );
+      this.loggedIn = localStorage.getItem("loggedIn");
+      if (this.loggedIn == "true") {
         e.preventDefault();
-      } else {
         this.isModalVisible = true;
         this.formSubmitted = false;
         this.name = "";
@@ -234,6 +244,10 @@ export default {
         this.groupwork = "";
         this.clean = "0";
         this.rating = "0";
+      } else {
+        alert(
+          "You must be a registered user to add a new review. Please login or register."
+        );
       }
     },
     closeModal() {
@@ -263,28 +277,28 @@ export default {
   padding-bottom: 15px;
   margin-left: 70px;
   font-weight: normal;
-  position:relative;left:80px;
+  position: relative;
+  left: 80px;
   background-color: white;
   width: 80%;
-  height:35%;
+  height: 35%;
   border-radius: 3%;
   border: solid 2px black;
 }
 .review {
-  font-size:20px;
-  color:black;
+  font-size: 20px;
+  color: black;
   font-weight: bold;
   height: 170px;
   box-sizing: border-box;
-  margin:25px;
-  margin-bottom:0px;
+  margin: 25px;
+  margin-bottom: 0px;
   margin-left: 75px;
   margin-right: 75px;
   background-color: lightgray;
   padding-top: 30px;
 }
-.profilePhoto
-{
+.profilePhoto {
   float: left;
   margin-left: 10px;
   width: 110px;
@@ -297,11 +311,14 @@ export default {
   border: solid 2px;
   border-color: black;
   text-align: center;
-  position:relative;bottom:15px;
-  position:relative;left:10px;
+  position: relative;
+  bottom: 15px;
+  position: relative;
+  left: 10px;
 }
-.profilePhoto h4{
-  position:relative;top:110px;
+.profilePhoto h4 {
+  position: relative;
+  top: 110px;
 }
 .stars {
   text-align: left;
