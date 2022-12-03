@@ -12,20 +12,38 @@
                       <div class="sub-header-left">
                         <div class="sort-wrapper sort-css">
                           <label class="highlight-sort">
-                            <input type="checkbox" class="sort sort-css" checked>
+                            <input
+                              type="checkbox"
+                              class="sort sort-css"
+                              checked
+                            />
                             Hottest
                           </label>
                           <label class="normal-sort">
-                            <input type="checkbox" class="sort sort-css" checked>
+                            <input
+                              type="checkbox"
+                              class="sort sort-css"
+                              checked
+                            />
                             Latest to oldest
                           </label>
                           <label class="normal-sort">
-                            <input type="checkbox" class="sort sort-css" checked>
+                            <input
+                              type="checkbox"
+                              class="sort sort-css"
+                              checked
+                            />
                             Most views
                           </label>
                         </div>
                       </div>
-                      <v-btn class="mx-2" fab dark color="blue-grey" @click="newPost">
+                      <v-btn
+                        class="mx-2"
+                        fab
+                        dark
+                        color="blue-grey"
+                        @click="newPost"
+                      >
                         <v-icon class="add-topic-button" color="white">
                           mdi-plus
                         </v-icon>
@@ -34,283 +52,240 @@
                   </div>
 
                   <div class="topic-list-content">
-                      <div>
-                        <div class="topic-item-wrap">
-                          <div class="topic-item">
-                            <a href="" class="topic-info">
-                              <div class="avatar"></div>
-                            </a>
-                            <div class="topic-title-wrapper">
-                              <div class="item-header">
-                                <router-link to="/forum/topic4">
-                                  <div class="title-container">
-                                    <div class="title">
-                                      Bathrooms are broken at Leavey... again
-                                    </div>
+                    <div>
+                      <div class="topic-item-wrap">
+                        <div class="topic-item">
+                          <a href="" class="topic-info">
+                            <div class="avatar"></div>
+                          </a>
+                          <div class="topic-title-wrapper">
+                            <div class="item-header">
+                              <router-link to="/forum/topic4">
+                                <div class="title-container">
+                                  <div class="title">
+                                    Bathrooms are broken at Leavey... again
                                   </div>
-                                </router-link>
-                              </div>
-                              <div class="topic-info">
+                                </div>
+                              </router-link>
+                            </div>
+                            <div class="topic-info">
+                              <span>
+                                <router-link to=""> booklover2002 </router-link>
                                 <span>
-                                  <router-link to="">
-                                    booklover2002
-                                  </router-link>
-                                  <span>
                                   Created at: 3:37pm on 11/27/2022
-                                    <p></p>
-                                  </span>
-                                  <span>
-                                    Last reply: 1:55pm on  11/30/2022
-                                  </span>
+                                  <p></p>
                                 </span>
-                              </div>
+                                <span> Last reply: 1:55pm on 11/30/2022 </span>
+                              </span>
                             </div>
-                            <div class="wrapper">
-                              <div class="icon-wrapper">
-
-                                <div class="top">
-                                  -265
-                                </div>
-                              </div>
+                          </div>
+                          <div class="wrapper">
+                            <div class="icon-wrapper">
+                              <div class="top">-265</div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    <div class="topic-list-content">
-                      <div>
-                        <div class="topic-item-wrap">
-                          <div class="topic-item">
-                            <a href="" class="topic-info">
-                              <div class="avatar"></div>
-                            </a>
-                            <div class="topic-title-wrapper">
-                              <div class="item-header">
-                                <router-link to="/forum/topic5">
-                                  <div class="title-container">
-                                    <div class="title">
-                                      To the blonde guy in the red shirt at Doheny earlier today...
-                                    </div>
-                                  </div>
-                                </router-link>
-                              </div>
-                              <div class="topic-info">
-                                <span>
-                                  <router-link to="">
-                                    studygirl10
-                                  </router-link>
-                                  <span>
-                                  Created at: 11:18pm on 11/6/2022
-                                    <p></p>
-                                  </span>
-                                  <span>
-                                    Last reply: 4:00pm on  11/27/2022
-                                  </span>
-                                </span>
-                              </div>
-                            </div>
-                            <div class="wrapper">
-                              <div class="icon-wrapper">
-
-                                <div class="top">
-                                  177
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="topic-list-content">
-                      <div>
-                        <div class="topic-item-wrap">
-                          <div class="topic-item">
-                            <a href="" class="topic-info">
-                              <div class="avatar"></div>
-                            </a>
-                            <div class="topic-title-wrapper">
-                              <div class="item-header">
-                                <router-link to="/forum/topic7">
-                                  <div class="title-container">
-                                    <div class="title">
-                                      This is an amazing website
-                                    </div>
-                                  </div>
-                                </router-link>
-                              </div>
-                              <div class="topic-info">
-                                <span>
-                                  <router-link to="">
-                                    yax11111
-                                  </router-link>
-                                  <span>
-                                  Created at: 12:04pm on 11/26/2022
-                                    <p></p>
-                                  </span>
-                                  <span>
-                                    Last reply: 9:05am on  11/27/2022
-                                  </span>
-                                </span>
-                              </div>
-                            </div>
-                            <div class="wrapper">
-                              <div class="icon-wrapper">
-
-                                <div class="top">
-                                  111
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    
                   <div class="topic-list-content">
-                      <div>
-                        <div class="topic-item-wrap">
-                          <div class="topic-item">
-                            <a href="" class="topic-info">
-                              <div class="avatar"></div>
-                            </a>
-                            <div class="topic-title-wrapper">
-                              <div class="item-header">
-                                <router-link to="/forum/topic1">
-                                  <div class="title-container">
-                                    <div class="title">
-                                      Anyone working at SAL today? 
-                                    </div>
+                    <div>
+                      <div class="topic-item-wrap">
+                        <div class="topic-item">
+                          <a href="" class="topic-info">
+                            <div class="avatar"></div>
+                          </a>
+                          <div class="topic-title-wrapper">
+                            <div class="item-header">
+                              <router-link to="/forum/topic5">
+                                <div class="title-container">
+                                  <div class="title">
+                                    To the blonde guy in the red shirt at Doheny
+                                    earlier today...
                                   </div>
-                                </router-link>
-                              </div>
-                              <div class="topic-info">
+                                </div>
+                              </router-link>
+                            </div>
+                            <div class="topic-info">
+                              <span>
+                                <router-link to=""> studygirl10 </router-link>
                                 <span>
-                                  <router-link to="">
-                                    codemaster789
-                                  </router-link>
-                                  <span>
+                                  Created at: 11:18pm on 11/6/2022
+                                  <p></p>
+                                </span>
+                                <span> Last reply: 4:00pm on 11/27/2022 </span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="wrapper">
+                            <div class="icon-wrapper">
+                              <div class="top">177</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="topic-list-content">
+                    <div>
+                      <div class="topic-item-wrap">
+                        <div class="topic-item">
+                          <a href="" class="topic-info">
+                            <div class="avatar"></div>
+                          </a>
+                          <div class="topic-title-wrapper">
+                            <div class="item-header">
+                              <router-link to="/forum/topic7">
+                                <div class="title-container">
+                                  <div class="title">
+                                    This is an amazing website
+                                  </div>
+                                </div>
+                              </router-link>
+                            </div>
+                            <div class="topic-info">
+                              <span>
+                                <router-link to=""> yax11111 </router-link>
+                                <span>
+                                  Created at: 12:04pm on 11/26/2022
+                                  <p></p>
+                                </span>
+                                <span> Last reply: 9:05am on 11/27/2022 </span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="wrapper">
+                            <div class="icon-wrapper">
+                              <div class="top">111</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="topic-list-content">
+                    <div>
+                      <div class="topic-item-wrap">
+                        <div class="topic-item">
+                          <a href="" class="topic-info">
+                            <div class="avatar"></div>
+                          </a>
+                          <div class="topic-title-wrapper">
+                            <div class="item-header">
+                              <router-link to="/forum/topic1">
+                                <div class="title-container">
+                                  <div class="title">
+                                    Anyone working at SAL today?
+                                  </div>
+                                </div>
+                              </router-link>
+                            </div>
+                            <div class="topic-info">
+                              <span>
+                                <router-link to=""> codemaster789 </router-link>
+                                <span>
                                   Created at: 10:26am on 12/1/2022
-                                    <p></p>
-                                  </span>
-                                  <span>
-                                    Last reply: 12:43pm on  12/1/2022
-                                  </span>
+                                  <p></p>
                                 </span>
-                              </div>
+                                <span> Last reply: 12:43pm on 12/1/2022 </span>
+                              </span>
                             </div>
-                            <div class="wrapper">
-                              <div class="icon-wrapper">
-
-                                <div class="top">
-                                  31
-                                </div>
-                              </div>
+                          </div>
+                          <div class="wrapper">
+                            <div class="icon-wrapper">
+                              <div class="top">31</div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                 
-                    <div class="topic-list-content">
-                      <div>
-                        <div class="topic-item-wrap">
-                          <div class="topic-item">
-                            <a href="" class="topic-info">
-                              <div class="avatar"></div>
-                            </a>
-                            <div class="topic-title-wrapper">
-                              <div class="item-header">
-                                <router-link to="/forum/topic2">
-                                  <div class="title-container">
-                                    <div class="title">
-                                      Why does Leavey smell so bad??? 
-                                    </div>
+                  <div class="topic-list-content">
+                    <div>
+                      <div class="topic-item-wrap">
+                        <div class="topic-item">
+                          <a href="" class="topic-info">
+                            <div class="avatar"></div>
+                          </a>
+                          <div class="topic-title-wrapper">
+                            <div class="item-header">
+                              <router-link to="/forum/topic2">
+                                <div class="title-container">
+                                  <div class="title">
+                                    Why does Leavey smell so bad???
                                   </div>
+                                </div>
+                              </router-link>
+                            </div>
+                            <div class="topic-info">
+                              <span>
+                                <router-link to="">
+                                  smellycoder35079
                                 </router-link>
-                              </div>
-                              <div class="topic-info">
                                 <span>
-                                  <router-link to="">
-                                    smellycoder35079
-                                  </router-link>
-                                  <span>
                                   Created at: 11:03am on 11/29/2022
-                                    <p></p>
-                                  </span>
-                                  <span>
-                                    Last reply: 5:49pm on  11/30/2022
-                                  </span>
+                                  <p></p>
                                 </span>
-                              </div>
+                                <span> Last reply: 5:49pm on 11/30/2022 </span>
+                              </span>
                             </div>
-                            <div class="wrapper">
-                              <div class="icon-wrapper">
-
-                                <div class="top">
-                                  78
-                                </div>
-                              </div>
+                          </div>
+                          <div class="wrapper">
+                            <div class="icon-wrapper">
+                              <div class="top">78</div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    <div class="topic-list-content">
-                      <div>
-                        <div class="topic-item-wrap">
-                          <div class="topic-item">
-                            <a href="" class="topic-info">
-                              <div class="avatar"></div>
-                            </a>
-                            <div class="topic-title-wrapper">
-                              <div class="item-header">
-                                <router-link to="/forum/topic3">
-                                  <div class="title-container">
-                                    <div class="title">
-                                      Has Fertitta ever not been completely booked? 
-                                    </div>
+                  <div class="topic-list-content">
+                    <div>
+                      <div class="topic-item-wrap">
+                        <div class="topic-item">
+                          <a href="" class="topic-info">
+                            <div class="avatar"></div>
+                          </a>
+                          <div class="topic-title-wrapper">
+                            <div class="item-header">
+                              <router-link to="/forum/topic3">
+                                <div class="title-container">
+                                  <div class="title">
+                                    Has Fertitta ever not been completely
+                                    booked?
                                   </div>
-                                </router-link>
-                              </div>
-                              <div class="topic-info">
-                                <span>
-                                  <router-link to="">
-                                    themarsha11man
-                                  </router-link>
-                                  <span>
-                                  Created at: 8:37pm on 11/29/2022
-                                    <p></p>
-                                  </span>
-                                  <span>
-                                    Last reply: 2:23pm on  11/30/2022
-                                  </span>
-                                </span>
-                              </div>
-                            </div>
-                            <div class="wrapper">
-                              <div class="icon-wrapper">
-
-                                <div class="top">
-                                  22
                                 </div>
-                              </div>
+                              </router-link>
+                            </div>
+                            <div class="topic-info">
+                              <span>
+                                <router-link to="">
+                                  themarsha11man
+                                </router-link>
+                                <span>
+                                  Created at: 8:37pm on 11/29/2022
+                                  <p></p>
+                                </span>
+                                <span> Last reply: 2:23pm on 11/30/2022 </span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="wrapper">
+                            <div class="icon-wrapper">
+                              <div class="top">22</div>
                             </div>
                           </div>
                         </div>
-
-
-
-
-
                       </div>
                     </div>
+                  </div>
 
-                     <div class="topic-list-container">
+                  <div class="topic-list-container">
                     <div class="topic-list-content">
                       <div>
                         <div class="topic-item-wrap">
@@ -334,28 +309,25 @@
                                     themarsha11man
                                   </router-link>
                                   <span>
-                                  Created at: 3:59pm on 11/25/2022
+                                    Created at: 3:59pm on 11/25/2022
                                     <p></p>
                                   </span>
                                   <span>
-                                    Last reply: 9:39am on  11/26/2022
+                                    Last reply: 9:39am on 11/26/2022
                                   </span>
                                 </span>
                               </div>
                             </div>
                             <div class="wrapper">
                               <div class="icon-wrapper">
-
-                                <div class="top">
-                                  6
-                                </div>
+                                <div class="top">6</div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    </div>                  
+                  </div>
                 </div>
               </div>
             </div>
@@ -364,29 +336,39 @@
       </div>
     </div>
   </div>
-  <div id="post" class="add-topic-page add-topic-page-css" data-appear="false" data-fullscreen="false" style="height: 50%;">
+  <div
+    id="post"
+    class="add-topic-page add-topic-page-css"
+    data-appear="false"
+    data-fullscreen="false"
+    style="height: 50%"
+  >
     <div class="bottom-contain-container">
       <div class="topic-editor-base">
         <div class="topic-editor topic-editor-css">
           <div class="editor-header">
             <div class="editor-header-left">
               <span class="wrapper3 title-input title-input-css">
-                <input class="input2" placeholder="Enter your topic title ..." value>
+                <input
+                  class="input2"
+                  placeholder="Enter your topic title ..."
+                  value
+                />
               </span>
             </div>
             <div class="editor-header-right">
               <v-btn depressed class="close-button" @click="closePost">
                 Close
               </v-btn>
-              <v-btn :loading="loading3"
-                     :disabled="loading3"
-                     color="blue-grey"
-                     class="post-button white--text"
-                     @click="loader = 'loading3'">
+              <v-btn
+                :loading="loading3"
+                :disabled="loading3"
+                color="blue-grey"
+                class="post-button white--text"
+                @click="loader = 'loading3'"
+              >
                 Post
-                <v-icon class="send-icon">
-                  mdi-send
-                </v-icon>
+                <v-icon class="send-icon"> mdi-send </v-icon>
               </v-btn>
             </div>
           </div>
@@ -403,25 +385,29 @@ export default {
     loading3: false,
     closed: false,
   }),
-  watch: ({
-    loader () {
-      const l = this.loader
-      this[l] = !this[l]
-      setTimeout(() => (this[l] = false), 3000)
-      this.loader = null
-    }
-  }),
+  watch: {
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
+      setTimeout(() => (this[l] = false), 3000);
+      this.loader = null;
+    },
+  },
   methods: {
     newPost() {
-      const page = document.querySelector("#post");
-      page.dataset.appear = "true";
+      if (localStorage.getItem("loggedIn") == "true") {
+        const page = document.querySelector("#post");
+        page.dataset.appear = "true";
+      } else {
+        alert("You must be logged in to add a post!");
+      }
     },
     closePost() {
       const page = document.querySelector("#post");
       page.dataset.appear = "false";
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -475,11 +461,11 @@ export default {
   -o-transition: 0.4s all;
   transition: 0.4s all;
 }
-.wrapper3{
+.wrapper3 {
   display: inline-block;
   position: relative;
 }
-.title-input{
+.title-input {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -529,7 +515,7 @@ export default {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.add-topic-page-css[data-appear='false'] {
+.add-topic-page-css[data-appear="false"] {
   min-height: 0 !important;
   height: 0 !important;
   opacity: 0;
@@ -538,7 +524,7 @@ export default {
   -webkit-box-shadow: 0 0 50px 0 rgb(0 0 0 / 30%);
   box-shadow: 0 0 50px 0 rgb(0 0 0 / 30%);
 }
-.add-topic-page-css[data-appear='true'] {
+.add-topic-page-css[data-appear="true"] {
   opacity: 1;
 }
 .add-topic-page-css {
@@ -562,7 +548,7 @@ export default {
   transition: box-shadow 0.4s;
   transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
 }
-.normal-sort{
+.normal-sort {
   height: 24px;
   font-size: 12px;
   color: rgb(55, 71, 79);
@@ -593,16 +579,20 @@ export default {
 .sort {
   display: none;
 }
-input[type='checkbox'] {
+input[type="checkbox"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
-input:not([type='range']), label, select, summary, textarea {
+input:not([type="range"]),
+label,
+select,
+summary,
+textarea {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
-.highlight-sort:first-child{
+.highlight-sort:first-child {
   padding-left: 0px;
 }
 .highlight-sort {
@@ -621,10 +611,10 @@ input:not([type='range']), label, select, summary, textarea {
   padding: 0px 12px;
 }
 
-.default-sort:first-child{
+.default-sort:first-child {
   padding-left: 0px;
 }
-.default-sort{
+.default-sort {
   height: 24px;
   font-size: 12px;
   color: rgb(55, 71, 79);
@@ -751,7 +741,7 @@ input:not([type='range']), label, select, summary, textarea {
   font-size: 12px;
 }
 
-.topic-item-wrap .topic-item{
+.topic-item-wrap .topic-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -793,23 +783,22 @@ input:not([type='range']), label, select, summary, textarea {
   background-image: url("tommytrojan.png");
   background-repeat: no-repeat;
   background-size: cover;
-		background-position: center;
+  background-position: center;
 }
-.profilePhoto
-    {
-      float: left;
-      margin-top: 15px;
-      margin-left: 10px;
-      width: 110px;
-      height: 110px;
-      border-radius: 100%;
-      background-image: url("tommytrojan.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      border: solid 2px;
-      border-color: black;
-    }
+.profilePhoto {
+  float: left;
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
+  background-image: url("tommytrojan.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: solid 2px;
+  border-color: black;
+}
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -854,7 +843,7 @@ input:not([type='range']), label, select, summary, textarea {
   width: 100%;
   margin-top: 10px;
 }
-.search-wrapper1{
+.search-wrapper1 {
   display: inline-block;
   position: relative;
   -webkit-transition: 0.3s all;
@@ -896,10 +885,15 @@ input:not([type='range']), label, select, summary, textarea {
   -webkit-box-shadow: 0 0 0 2px rgb(251 192 46 / 40%);
   box-shadow: 0 0 0 2px rgb(251 192 46 / 40%);
 }
-button, input {
+button,
+input {
   overflow: visible;
 }
-input, button, select, optgroup, textarea {
+input,
+button,
+select,
+optgroup,
+textarea {
   margin: 0;
   color: inherit;
   font-size: inherit;
@@ -951,11 +945,15 @@ input {
 a {
   background-color: transparent;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
@@ -963,7 +961,12 @@ div {
   display: block;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0.5em;
   color: rgba(0, 0, 0, 0.85);
@@ -982,7 +985,11 @@ h1 {
   margin-inline-end: 0px;
   font-weight: bold;
 }
-p, input, textarea, select, button {
+p,
+input,
+textarea,
+select,
+button {
   font-size: 14px;
   font-weight: 400;
 }
@@ -990,8 +997,10 @@ body {
   margin: 0;
   color: rgba(0, 0, 0, 0.65);
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-variant: tabular-nums;
-  line-height: 1.5;;
+  line-height: 1.5;
 }
 </style>
