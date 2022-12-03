@@ -72,6 +72,8 @@ input {
   width: 100vw;
   background-color: white;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .outer-form {
   width: 40%;

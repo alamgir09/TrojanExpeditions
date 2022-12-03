@@ -8,17 +8,13 @@
               <div class="topic-root">
                 <div class="back r-border">
                   <router-link to="/forum">
-                    <v-btn
-                      variant="text"
-                      prepend-icon="mdi-arrow-left">
+                    <v-btn variant="text" prepend-icon="mdi-arrow-left">
                       Back
                     </v-btn>
                   </router-link>
                 </div>
-                <div class="title-container ">
-                  <h5 class="title">
-                    This is an amazing website.
-                  </h5>
+                <div class="title-container">
+                  <h5 class="title">This is an amazing website.</h5>
                 </div>
                 <div class="action-panel">
                   <v-row>
@@ -51,33 +47,20 @@
                   <div class="action-col">
                     <div class="action-container action-container-css">
                       <div class="upvote">
-                        <v-btn
-                          icon="mdi-arrow-up-bold"
-                          @click="inc"
-                        >
-                        </v-btn>
+                        <v-btn icon="mdi-arrow-up-bold" @click="inc"> </v-btn>
                       </div>
-                      <div id="count"
-                           class="count">
-                        0
-                      </div>
+                      <div id="count" class="count">0</div>
                       <div class="upvote">
-                        <v-btn
-                          icon="mdi-arrow-down-bold"
-                          @click="dec"
-                        >
-                        </v-btn>
+                        <v-btn icon="mdi-arrow-down-bold" @click="dec"> </v-btn>
                       </div>
                     </div>
                   </div>
                   <div class="post-area">
                     <div class="root">
-                      <img class="avatar" :src="image">
+                      <img class="avatar" :src="image" />
                       <div>
                         <div class="user-info">
-                          <span class="user-name">
-                            yax11111
-                          </span>
+                          <span class="user-name"> yax11111 </span>
                         </div>
                         <div class="post-info">
                           Created at: 12:04pm on 11/26/2022
@@ -85,7 +68,13 @@
                       </div>
                     </div>
                     <div class="content-area">
-                      <p>Welcome everyone! This is the final project of class CSCI 201. Our group developed this website using Java, HTML, CSS, and JavaScript to provide you with the best experience in finding a comfortable place to study at USC</p>
+                      <p>
+                        Welcome everyone! This is the final project of class
+                        CSCI 201. Our group developed this website using Java,
+                        HTML, CSS, and JavaScript to provide you with the best
+                        experience in finding a comfortable place to study at
+                        USC
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -97,71 +86,78 @@
                       </span>
                     </div>
                     <div class="comment-sort">
-
-                      <v-btn variant="text">
-
-                      </v-btn>
+                      <v-btn variant="text"> </v-btn>
                     </div>
                   </div>
                   <div class="comment-container2">
                     <div class="comment">
                       <div class="editor">
-                        <v-textarea auto-grow rows="2" counter="50" >
-
+                        <v-textarea
+                          auto-grow
+                          rows="2"
+                          counter="50"
+                          v-model="text"
+                        >
                         </v-textarea>
                         <div class="action-area">
-                          <div class="blank-space">
-
-                          </div>
-                          <v-btn color="blue-grey" class="comment-post-button" @click="showComment">
+                          <div class="blank-space"></div>
+                          <v-btn
+                            color="blue-grey"
+                            class="comment-post-button"
+                            @click="showComment"
+                          >
                             Post
                           </v-btn>
                         </div>
                       </div>
                     </div>
                     <div class="comment-list">
-                      <div id="comment2" class="comment2" data-document-id data-show-comment1="false">
+                      <div
+                        id="comment2"
+                        class="comment2"
+                        data-document-id
+                        data-show-comment1="false"
+                      >
                         <div class="root2">
                           <v-btn
                             class="comment-avatar"
                             variant="text"
                             icon="tommytrojan.png"
                           >
-                            
                           </v-btn>
                           <div>
                             <div class="user-info">
-                              <span class="user-name">
-                                frankthetank3
-                              </span>
+                              <span class="user-name"> marywang </span>
                             </div>
                           </div>
                         </div>
                         <div class="comment-content">
-                          <p>Good job guys!</p>
+                          <p>{{ text }}</p>
                         </div>
                         <div class="comment-action">
-                          <v-btn
-                            variant="text"
-                          >
-                          </v-btn>
+                          <v-btn variant="text"> </v-btn>
                         </div>
-                        <div id="sub-comment" class="sub-comment" data-is-show="false">
+                        <div
+                          id="sub-comment"
+                          class="sub-comment"
+                          data-is-show="false"
+                        >
                           <div class="editor">
                             <v-textarea auto-grow rows="2" counter="50">
-
                             </v-textarea>
                             <div class="action-area">
-                              <div class="blank-space">
-
-                              </div>
+                              <div class="blank-space"></div>
                               <v-btn
                                 variant="text"
                                 @click="closeReply"
-                                class="comment-close-button">
+                                class="comment-close-button"
+                              >
                                 cancel
                               </v-btn>
-                              <v-btn color="blue-grey" class="comment-post-button">
+                              <v-btn
+                                color="blue-grey"
+                                class="comment-post-button"
+                              >
                                 Post
                               </v-btn>
                             </div>
@@ -187,41 +183,42 @@ export default {
     FavisDisabled: false,
     LikeisDisabled: false,
     image: require("@/assets/tommytrojan.png"),
+    text: "",
   }),
   methods: {
-    showComment () {
+    showComment() {
       const page = document.querySelector("#comment2");
       page.dataset.showComment1 = "true";
     },
     inc() {
-      const page = document.getElementById('count');
+      const page = document.getElementById("count");
       let num = page.innerHTML;
-      num ++;
+      num++;
       page.innerHTML = num;
     },
     dec() {
-      const page = document.getElementById('count');
+      const page = document.getElementById("count");
       let num = page.innerHTML;
-      num --;
+      num--;
       page.innerHTML = num;
     },
     openReply() {
       const page = document.querySelector("#sub-comment");
       page.dataset.isShow = "true";
     },
-    closeReply(){
+    closeReply() {
       const page = document.querySelector("#sub-comment");
       page.dataset.isShow = "false";
     },
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
-.comment2[data-show-comment1='false'] {
+.comment2[data-show-comment1="false"] {
   display: none;
 }
-.sub-comment[data-is-show='false'] {
+.sub-comment[data-is-show="false"] {
   display: none;
 }
 .sub-comment {
@@ -320,7 +317,7 @@ export default {
   font-weight: 500;
   font-size: 12px;
 }
-.comment-header{
+.comment-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,7 +331,7 @@ export default {
   border-width: 1px 0;
   padding: 0 20px;
 }
-.user-name{
+.user-name {
   color: #424242;
   margin-left: 10px;
   font-size: 20px;
@@ -351,7 +348,7 @@ export default {
   border: solid 1px;
   border-color: black;
 }
-.post-info{
+.post-info {
   color: #bdbdbd;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -365,7 +362,7 @@ export default {
   margin-left: 25px;
   font-size: 20px;
 }
-.user-info{
+.user-info {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -468,7 +465,7 @@ export default {
   white-space: pre;
   font-size: 30px;
 }
-.title-container{
+.title-container {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -476,7 +473,7 @@ export default {
   min-width: 0px;
 }
 .back {
-  padding: 13px 16px 13px 16px
+  padding: 13px 16px 13px 16px;
 }
 .r-border {
   margin-right: 16px;
@@ -500,12 +497,16 @@ export default {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
   border-radius: 3px;
 }
-input[type='checkbox'] {
+input[type="checkbox"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
-input:not([type='range']), label, select, summary, textarea {
+input:not([type="range"]),
+label,
+select,
+summary,
+textarea {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
@@ -546,7 +547,7 @@ input:not([type='range']), label, select, summary, textarea {
 .forum-wrapper {
   margin: 10px 0px 40px;
 }
-.topic-item-wrap .topic-item{
+.topic-item-wrap .topic-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -593,10 +594,15 @@ input:not([type='range']), label, select, summary, textarea {
   -webkit-box-shadow: 0 0 0 2px rgb(251 192 46 / 40%);
   box-shadow: 0 0 0 2px rgb(251 192 46 / 40%);
 }
-button, input {
+button,
+input {
   overflow: visible;
 }
-input, button, select, optgroup, textarea {
+input,
+button,
+select,
+optgroup,
+textarea {
   margin: 0;
   color: inherit;
   font-size: inherit;
@@ -648,11 +654,15 @@ input {
 a {
   background-color: transparent;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
@@ -668,7 +678,12 @@ h5 {
   margin-inline-end: 0px;
   font-weight: bold;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0.5em;
   color: rgba(0, 0, 0, 0.85);
@@ -687,7 +702,11 @@ h1 {
   margin-inline-end: 0px;
   font-weight: bold;
 }
-p, input, textarea, select, button {
+p,
+input,
+textarea,
+select,
+button {
   font-size: 14px;
   font-weight: 400;
 }
@@ -695,8 +714,10 @@ body {
   margin: 0;
   color: rgba(0, 0, 0, 0.65);
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-variant: tabular-nums;
-  line-height: 1.5;;
+  line-height: 1.5;
 }
 </style>
